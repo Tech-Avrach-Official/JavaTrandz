@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+# Logs
+*.log
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Environment variables
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
