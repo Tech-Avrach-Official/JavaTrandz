@@ -27,7 +27,7 @@ const Form = () => {
                             <Checkbox id="Software Development" />
                             <label
                                 htmlFor="terms"
-                                className="text-xs w-20 sm:text-sm text-gray-600 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                className="text-xs sm:text-sm text-gray-600 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
                                 Java
                             </label>

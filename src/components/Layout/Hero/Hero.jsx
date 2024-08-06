@@ -13,7 +13,7 @@ const Hero = ({ }) => {
           <div className='relative lg:w-[50%] xl:w-[65%] w-full h-full pt-10 md:p-5 text-center'>
             <div>
               <h1 className='text-3xl md:text-[45px] md:mt-10 font-bold text-white md:leading-[55px] tracking-tight'>India's best tech <br />
-                learning</h1>
+                learning Company</h1>
               <h2 className='text-sm md:text-lg text-white mt-2 tracking-wide'>Learn industry-relevant skills with top tech veterans</h2>
               
 
