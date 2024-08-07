@@ -2,15 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
+    --first: rgb(0, 0, 0);
+    --second: rgb(255,154,0);
+    --third: rgb(67, 67, 67);
+    --four: rgb(255, 255, 255);
+    --text-primary: rgb(255, 255, 255);
+    --text-secondary: rgb(0, 0, 0);
+    --text-thirdary:rgb(67, 67, 67);
     --background: rgb(255, 255, 255);
     --foreground: rgb(10, 25, 40);
     --card: rgb(255, 255, 255);
     --card-foreground: rgb(10, 25, 40);
     --popover: rgb(255, 255, 255);
     --popover-foreground: rgb(10, 25, 40);
-    --primary: rgb(16, 30, 51);
+    --primary: rgb(0, 0, 0);
     --primary-foreground: rgb(243, 245, 247);
     --secondary: rgb(238, 243, 247);
     --secondary-foreground: rgb(16, 30, 51);

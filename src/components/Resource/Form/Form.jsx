@@ -19,7 +19,7 @@ const Form = () => {
             <div className='w-full mt-5 lg:pt-[71px] relative '>
                 <div className='lg:max-h-[550px] lg:min-w-[500px] lg:absolute  bg-white rounded-lg p-3 sm:p-6 shadow-bottom'>
                     <div>
-                        <h1 className='text-3xl tracking-wide'>Book a Live Class, For <span className='font-bold text-3xl text-red-600'>Free!</span></h1>
+                        <h1 className='text-3xl tracking-wide'>Book a Live Class, For <span className='font-bold text-3xl text-second'>Free!</span></h1>
                         <p className='mt-5 text-gray-700'>Your Topic of Interest <span className='text-red-800'>*</span></p>
                     </div>
                     <div className='flex justify-center gap-5 sm:justify-between sm:items-center mt-5'>
