@@ -5,7 +5,7 @@ import { Button } from '../ui/button'
 
 const Courses = () => {
     return (
-        <div className='px-3 md:px-10 lg:px-32 border border-red-600'>
+        <div className='px-3 md:px-10 lg:px-32'>
             <div >
                 <div className='mt-10 md:mt-16'>
                     <div className='flex items-center justify-center gap-4'>
