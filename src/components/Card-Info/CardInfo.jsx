@@ -22,7 +22,7 @@ const CardInfo = () => {
                             </div>
                         </div>
                         <div className='flex items-center justify-center'>
-                            hiii
+                            Icon
                         </div>
                         <div className='border bg-gray-100 border-gray-800 sm:w-80 p-2 rounded-lg'>
                             <div className='flex items-center justify-center'>
@@ -34,7 +34,7 @@ const CardInfo = () => {
                             </div>
                         </div>
                         <div className='flex items-center justify-center'>
-                            hiii
+                            Icon
                         </div>
                         <div className='border bg-gray-100 border-gray-800 sm:w-80 p-2 rounded-lg'>
                             <div className='flex items-center justify-center'>
