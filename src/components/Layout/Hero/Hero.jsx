@@ -19,8 +19,8 @@ const Hero = ({ }) => {
 
             </div>
             {/* <FlipText /> */}
-            <div className='h-80 px-12 mt-5'>
-              <img className='rounded-lg w-full h-full object-cover' src="https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg" alt="" />
+            <div className='h-80 px-5 md:px-12 mt-5'>
+              <img className='rounded-t-lg w-full h-full object-cover' src="https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg" alt="" />
             </div>
             <div className='lg:absolute lg:bottom-[-35px] w-full lg:w-[95.5%] shadow-bottom flex items-center justify-between bg-white px-5 lg:px-20 py-5 lg:mt-5 rounded-lg'>
               <div className='lg:flex items-center gap-3'>

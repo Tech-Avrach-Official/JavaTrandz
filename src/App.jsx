@@ -19,6 +19,10 @@ import Report from './components/Download Report/Report'
 import Promote from './components/Promote Section/Promote'
 import PromoteCard from './components/ui/PromoteCard'
 import Courses from './components/Courses Info/Courses'
+import CardInfo from './components/Card-Info/CardInfo'
+import Desgine from './components/degine/Desgine'
+import MultipleCard from './components/Multiple-Cards/MultipleCard'
+import ExploreCards from './components/Explore-Cards/ExploreCards'
  
 const notifications = [
   {
@@ -48,6 +52,10 @@ function App({ className, ...props }) {
     <Promote/>
     {/* <PromoteCard/> */}
     <Courses/>
+    <CardInfo/>
+    <Desgine/>
+    <MultipleCard/>
+    <ExploreCards/>
    </div>
 
     </>

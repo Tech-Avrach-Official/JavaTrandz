@@ -16,6 +16,8 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Button } from '@/components/ui/button'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+
 
 const Sidebar = () => {
 
@@ -33,6 +35,12 @@ const Sidebar = () => {
             <Sheet>
                 <SheetTrigger>Click here</SheetTrigger>
                 <SheetContent>
+                <SheetHeader>
+                        <VisuallyHidden>
+                            <SheetTitle>Sidebar Menu</SheetTitle>
+                        </VisuallyHidden>
+                        <SheetDescription></SheetDescription>
+                        </SheetHeader>
                     <div className='mt-20'>
                         <div>
                             <h1 className='text-3xl font-bold'>Login</h1>

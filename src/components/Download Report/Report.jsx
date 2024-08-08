@@ -18,7 +18,7 @@ const Report = () => {
                     <div className='lg:w-1/2 flex flex-col gap-5 items-center justify-center '>
                         <div>
                             <Select>
-                                <SelectTrigger className="w-[230px] md:w-[330px] md:h-12 rounded-sm">
+                                <SelectTrigger className="w-[200px] md:w-[330px] md:h-12 rounded-sm">
                                     <SelectValue placeholder="Theme" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -29,7 +29,7 @@ const Report = () => {
                             </Select>
                         </div>
                         <div>
-                            <Button className="w-[230px] md:w-[330px] md:h-12 bg-white text-blue-700 border-blue-700 border">Download Report</Button>
+                            <Button className="w-[200px] md:w-[330px] md:h-12 bg-white text-blue-700 border-blue-700 border">Download Report</Button>
                         </div>
                     </div>
                 </div>
