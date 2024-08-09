@@ -5,17 +5,17 @@ import { Button } from '../ui/button'
 
 const Courses = () => {
     return (
-        <div className='px-3 md:px-10 lg:px-32'>
+        <div className='px-3 md:px-10 lg:px-32 bg-[#F8F8F8] pt-10 md:pt-20'>
             <div >
-                <div className='mt-10 md:mt-16'>
+                <div>
                     <div className='flex items-center justify-center gap-4'>
                         <img className='hidden md:block lg:w-[full]' src={lineLeft} alt="" />
                         <span className='text-base lg:text-xl font-semibold -tracking-tight'>ON-CAMPUS PROGRAMS</span>
                         <img className='hidden md:block lg:w-[full]' src={lineRight} alt="" />
                     </div>
                 </div>
-                <div className='border rounded-lg border-black mt-10 md:mt-20 md:flex'>
-                    <div className='border border-green-800 w-full md:w-[35%] p-1 md:p-5 flex md:flex-col'>
+                <div className='border rounded-lg border-black bg-white mt-10 md:mt-20 md:flex'>
+                    <div className='w-full md:w-[35%] p-1 md:p-5 flex md:flex-col'>
                         <div className='bg-green-700 h-10 w-1/2 md:w-full md:full md:h-28'>
 
                         </div>
@@ -33,7 +33,7 @@ const Courses = () => {
                         </div>
                     </div>
                     <div className='p-4 md:p-8 md:w-[65%]'>
-                        <div className='h-[90%]'>
+                        <div className='h-[85%]'>
                         <div className='text-2xl md:text-3xl font-normal text-center mt-5'>Java Trandze's Historical <span className='font-semibold '>Career Transition Report</span>
                         </div>
                         <div className='flex flex-wrap justify-center mt-8 gap-5'>
@@ -47,8 +47,8 @@ const Courses = () => {
                             
                         </div>
                         </div>
-                        <div className='flex items-center justify-center h-[10%]'>
-                            <Button className="mt-5" >Quick Action</Button>
+                        <div className='flex items-end justify-center h-[10%]'>
+                            <Button className="mt-10 md:mt-0 w-48" >Quick Action</Button>
                         </div>
                     </div>
                 </div>

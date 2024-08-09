@@ -23,6 +23,8 @@ import CardInfo from './components/Card-Info/CardInfo'
 import Desgine from './components/degine/Desgine'
 import MultipleCard from './components/Multiple-Cards/MultipleCard'
 import ExploreCards from './components/Explore-Cards/ExploreCards'
+import Footer from './components/Footer/Footer'
+import InfoStrip from './components/Information-Strip/InfoStrip'
  
 const notifications = [
   {
@@ -45,6 +47,7 @@ function App({ className, ...props }) {
   return (
     <>
    <div>
+    <InfoStrip/>
     <Navbar/>
     <Hero/>
     {/* <FlipText/> */}
@@ -56,6 +59,7 @@ function App({ className, ...props }) {
     <Desgine/>
     <MultipleCard/>
     <ExploreCards/>
+    <Footer/>
    </div>
 
     </>
