@@ -17,6 +17,8 @@ import {
 } from "@/components/ui/select"
 import { Button } from '@/components/ui/button'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faFacebook, faTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
 
 const Sidebar = () => {
@@ -70,28 +72,18 @@ const Sidebar = () => {
                             <div><p className='text-blue-600 font-bold border-b border-dashed border-blue-600 cursor-pointer' 
                             // onClick={handleShowClicked}
                             >continue using email</p></div>
-{/* 
-                            {
-                                showInput && (
-                                    <div>
-                                        <p>Hy</p>
-                                        <p>By</p>
-                                    </div>
-                                )
-                            }
-
-                            {
-                                hideInput && (
-                                    setHideInput(false)
-                                )
-                            }
-                             */}
 
                         </div>
                         <div class="flex items-center justify-center mt-5">
                             <div class="flex-grow border-t border-gray-400"></div>
                             <span class="mx-3 text-gray-500">OR</span>
                             <div class="flex-grow border-t border-gray-400"></div>
+                        </div>
+                        <div className='flex gap-6 mt-5'>
+                        <FontAwesomeIcon icon={faInstagram} className='text-black text-4xl' />
+                        <FontAwesomeIcon icon={faFacebook} className='text-black text-4xl' />
+                        <FontAwesomeIcon icon={faTwitter} className='text-black text-4xl' />
+                        <FontAwesomeIcon icon={faLinkedin} className='text-black text-4xl' />
                         </div>
                     </div>
                 </SheetContent>

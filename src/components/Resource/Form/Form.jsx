@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/select"
 import { Button } from '@/components/ui/button'
 import SignUpSidebar from '../../Auth/SignUp-Sidebar/SignUpSidebar'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
 
 const Form = () => {
     return (
@@ -84,7 +85,7 @@ const Form = () => {
                     </div>
                     <div className='mt-7 flex flex-wrap-reverse gap-3 items-center'>
                         <div><Button size="lg">Continue Booking Live Class</Button></div>
-                        <div className='flex items-center'><span className='ml-2'>Limited seats left</span></div>
+                        <div className='flex items-center'><FontAwesomeIcon icon={faUserGroup} className='text-xl' /><span className='ml-2'>Limited seats left</span></div>
                     </div>
                     <div className='mt-5 flex items-center gap-1'>
                         <div className='text-sm text-gray-700'>Already have an account?</div> 
