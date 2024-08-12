@@ -25,6 +25,7 @@ import MultipleCard from './components/Multiple-Cards/MultipleCard'
 import ExploreCards from './components/Explore-Cards/ExploreCards'
 import Footer from './components/Footer/Footer'
 import InfoStrip from './components/Information-Strip/InfoStrip'
+import Chart from './components/ui/chart'
  
 const notifications = [
   {
@@ -59,6 +60,9 @@ function App({ className, ...props }) {
     <Desgine/>
     <MultipleCard/>
     <ExploreCards/>
+
+{/* <Chart/> */}
+
     <Footer/>
    </div>
 

@@ -7,6 +7,8 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Button } from '../ui/button'
+// import chart from '../ui/chart'
+import Chart from '../ui/chart'
 
 
 const Report = () => {
@@ -16,8 +18,10 @@ const Report = () => {
                 <div className='text-2xl md:text-4xl font-normal text-center'>Java Trandze's Historical <span className='font-semibold'>Career Transition Report</span>
                 </div>
                 <div className='mt-5 xl:p-5 lg:flex md:mt-10'>
-                    <div className='lg:w-1/2 border border-red-600 h-72'> </div>
-                    <div className='lg:w-1/2 flex flex-col gap-5 items-center justify-center '>
+                    <div className='w-full lg:w-[50%]'>
+                        <Chart/>
+                    </div>
+                    <div className='lg:w-[50%] mt-5 md:mt-0 flex flex-col gap-5 items-center justify-center '>
                         <div>
                             <Select>
                                 <SelectTrigger className="w-[200px] md:w-[330px] md:h-12 rounded-sm">
