@@ -1,12 +1,27 @@
 import { ChevronRight } from "lucide-react";
-
+import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { cn } from "../../lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
 
 export default function InfoStrip() {
+
+    const [strip, setStrip] = useState(true)
+
+    const closeInfoStrip = () => {
+        setStrip(!strip);
+
+        setTimeout(() => {
+            setStrip(true);
+        }, 20000);
+    }
+
     return (
-        <div className="z-10 flex  w-full items-center justify-center">
+        <div className={`info-strip bg-black flex items-center justify-between px-7 ${strip ? '' : 'hidden'}`}>
+            <div></div>
+            <div>
             <AnimatedGradientText>
                 🎉 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />{" "}
                 <span
@@ -24,6 +39,13 @@ export default function InfoStrip() {
           </button> */}
                 <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
             </AnimatedGradientText>
+            </div>
+            <div className='flex items-center justify-end text-xl cursor-pointer'
+                onClick={closeInfoStrip}
+        >
+            <FontAwesomeIcon icon={faXmark} className='text-white' />
+        </div>
+
         </div>
     );
 }

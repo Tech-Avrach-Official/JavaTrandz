@@ -26,6 +26,12 @@ import ExploreCards from './components/Explore-Cards/ExploreCards'
 import Footer from './components/Footer/Footer'
 import InfoStrip from './components/Information-Strip/InfoStrip'
 import Chart from './components/ui/chart'
+import SideAction from './components/Side-Quick-Action/SideAction'
+import ChatBoat from './components/ChatBoat/ChatBoat'
+// import ChatBoat from './components/ChatBoat/ChatBoat'
+// import ChatBoat from './components/ChatBoat/ChatBoat'
+
+// ChatBoat
  
 const notifications = [
   {
@@ -60,9 +66,10 @@ function App({ className, ...props }) {
     <Desgine/>
     <MultipleCard/>
     <ExploreCards/>
-
+    <SideAction/>
+    {/* <ChatBoat/> */}
+    <ChatBoat/>
 {/* <Chart/> */}
-
     <Footer/>
    </div>
 

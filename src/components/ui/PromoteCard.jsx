@@ -10,7 +10,7 @@ const PromoteCard = () => {
                 </div>
                 <div className='w-full p-4 md:w-[60%] lg:w-[55%] md:p-8 shadow-[5px_2px_10px_3px_rgba(204,204,204,0.39)] rounded-r-lg bg-white'>
                     <div className="flex items-center">
-                        <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+
                         <p className="text-gray-600 text-sm">Designed & Delivered by Business Leaders</p>
                     </div>
 
@@ -50,7 +50,6 @@ const PromoteCard = () => {
                 </div>
                 <div className='w-full p-4 md:w-[60%] lg:w-[55%] md:p-8 shadow-[5px_2px_10px_3px_rgba(204,204,204,0.39)] rounded-r-lg bg-white'>
                     <div className="flex items-center">
-                        <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         <p className="text-gray-600 text-sm">Designed & Delivered by Business Leaders</p>
                     </div>
 

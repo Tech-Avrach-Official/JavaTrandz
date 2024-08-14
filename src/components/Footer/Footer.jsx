@@ -28,6 +28,7 @@ const Footer = () => {
                         <div className='h-10 w-10 rounded-full bg-[#9CB2E6]'></div> */}
                     </div>
                 </div>
+                <div className='flex gap-20 sm:gap-28 mt-7 md:mt-0 flex-wrap'>
                 <div className='mt-7 md:mt-0'>
                     <div>
                         <h1 className='text-white text-2xl font-normal'>Resources</h1>
@@ -76,7 +77,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='mt-7 md:mt-0'>
+                <div>
                     <div>
                         <h1 className='text-white text-2xl font-normal'>Get in Touch</h1>
                     </div>
@@ -86,6 +87,7 @@ const Footer = () => {
                             <li className='text-gray-400 cursor-pointer'>Contact ;- xyz@gmail.com</li>
                         </ul>
                     </div>
+                </div>
                 </div>
             </div>
             <div className='mt-10'>
