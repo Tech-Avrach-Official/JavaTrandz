@@ -28,6 +28,7 @@ import InfoStrip from './components/Information-Strip/InfoStrip'
 import Chart from './components/ui/chart'
 import SideAction from './components/Side-Quick-Action/SideAction'
 import ChatBoat from './components/ChatBoat/ChatBoat'
+import ImageSlider from './components/ui/ImageSlider'
 // import ChatBoat from './components/ChatBoat/ChatBoat'
 // import ChatBoat from './components/ChatBoat/ChatBoat'
 
@@ -69,6 +70,7 @@ function App({ className, ...props }) {
     <SideAction/>
     {/* <ChatBoat/> */}
     <ChatBoat/>
+    {/* <ImageSlider/> */}
 {/* <Chart/> */}
     <Footer/>
    </div>
