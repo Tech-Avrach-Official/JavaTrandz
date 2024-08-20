@@ -27,7 +27,10 @@ const SideAction = () => {
     return (
         <div 
             className={`fixed left-0 top-1/2 transform -translate-y-1/2 ${isTransparent ? 'opacity-50' : ''}`} 
-            style={{ transition: 'opacity 0.5s ease' }} // Added transition for smooth effect
+            style={{ transition: 'opacity 0.5s ease' }}
+            onMouseEnter={() => handleScroll()}
+            
+            // Added transition for smooth effect
         >
             <div>
                 <div className="flex flex-col items-center gap-4 text-black bg-black rounded-r-lg p-1">

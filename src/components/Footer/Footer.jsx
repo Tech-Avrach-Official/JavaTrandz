@@ -29,65 +29,67 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='flex gap-20 sm:gap-28 mt-7 md:mt-0 flex-wrap'>
-                <div className='mt-7 md:mt-0'>
-                    <div>
-                        <h1 className='text-white text-2xl font-normal'>Resources</h1>
+                    <div className='mt-7 md:mt-0'>
+                        <div>
+                            <h1 className='text-white text-2xl font-normal'>Resources</h1>
+                        </div>
+                        <div className='mt-5'>
+                            <ul>
+                                <li className='text-gray-400 cursor-pointer'>Home</li>
+                                <li className='text-gray-400 cursor-pointer'>About</li>
+                                <li className='text-gray-400 cursor-pointer'>Services</li>
+                                <li className='text-gray-400 cursor-pointer'>Courses</li>
+                                <li className='text-gray-400 cursor-pointer'>Contact</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className='mt-5'>
-                        <ul>
-                            <li className='text-gray-400 cursor-pointer'>Home</li>
-                            <li className='text-gray-400 cursor-pointer'>About</li>
-                            <li className='text-gray-400 cursor-pointer'>Services</li>
-                            <li className='text-gray-400 cursor-pointer'>Courses</li>
-                            <li className='text-gray-400 cursor-pointer'>Contact</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div className='mt-7 md:mt-0'>
+                    <div className='mt-7 md:mt-0'>
+                        <div>
+                            <h1 className='text-white text-2xl font-normal'>Follow us on</h1>
+                        </div>
+                        <div className='mt-5'>
+                            <ul>
+                                <li className='text-gray-400 cursor-pointer flex gap-2'>
+                                    <span><FontAwesomeIcon
+                                        icon={faYoutube}
+                                        className='text-white text-base'
+                                    /></span> <span>Youtube</span></li>
+                                <li className='text-gray-400 cursor-pointer flex gap-2'>
+                                    <span><FontAwesomeIcon
+                                        icon={faInstagram}
+                                        className='text-white text-base'
+                                    /></span> <span>Instagram</span></li>
+                                <li className='text-gray-400 cursor-pointer flex gap-2'>
+                                    <span><FontAwesomeIcon
+                                        icon={faFacebook}
+                                        className='text-white text-base'
+                                    /></span> <span>Facebook</span></li>
+                                <li className='text-gray-400 cursor-pointer flex gap-2'>
+                                    <span><FontAwesomeIcon
+                                        icon={faTwitter}
+                                        className='text-white text-base'
+                                    /></span> <span>Twitter</span></li>
+                                <li className='text-gray-400 cursor-pointer flex gap-2'>
+                                    <span><FontAwesomeIcon
+                                        icon={faLinkedin}
+                                        className='text-white text-base'
+                                    /></span> <span>Linkedin</span></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
                     <div>
-                        <h1 className='text-white text-2xl font-normal'>Follow us on</h1>
+                        <div>
+                            <h1 className='text-white text-2xl font-normal'>Get in Touch</h1>
+                        </div>
+                        <div className='mt-5'>
+                            <ul>
+                                <li className='text-gray-400 cursor-pointer'>+91 123456789</li>
+                                <li className='text-gray-400 cursor-pointer'>Contact ;- xyz@gmail.com</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className='mt-5'>
-                        <ul>
-                            <li className='text-gray-400 cursor-pointer'>
-                                <span><FontAwesomeIcon
-                                    icon={faYoutube}
-                                    className='text-white text-base'
-                                /></span> Youtube</li>
-                            <li className='text-gray-400 cursor-pointer'>
-                                <span><FontAwesomeIcon
-                                    icon={faInstagram}
-                                    className='text-white text-base'
-                                /></span> Instagram</li>
-                            <li className='text-gray-400 cursor-pointer'> <span><FontAwesomeIcon
-                                icon={faFacebook}
-                                className='text-white text-base'
-                            /></span> Facebook</li>
-                            <li className='text-gray-400 cursor-pointer'>
-                                <span><FontAwesomeIcon
-                                    icon={faTwitter}
-                                    className='text-white text-base'
-                                /></span> Twitter</li>
-                            <li className='text-gray-400 cursor-pointer'>
-                                <span><FontAwesomeIcon
-                                    icon={faLinkedinIn}
-                                    className='text-white text-base'
-                                /></span> LinkedIn</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h1 className='text-white text-2xl font-normal'>Get in Touch</h1>
-                    </div>
-                    <div className='mt-5'>
-                        <ul>
-                            <li className='text-gray-400 cursor-pointer'>+91 123456789</li>
-                            <li className='text-gray-400 cursor-pointer'>Contact ;- xyz@gmail.com</li>
-                        </ul>
-                    </div>
-                </div>
                 </div>
             </div>
             <div className='mt-10'>

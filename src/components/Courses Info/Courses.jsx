@@ -39,7 +39,8 @@ const courseData = [
 ]
 
 const Courses = () => {
-    const [selectedCourse, setSelectedCourse] = useState(null);
+    // Set the initial state to the Java course
+    const [selectedCourse, setSelectedCourse] = useState(courseData[0]);
 
     const handleCourseClick = (course) => {
         setSelectedCourse(course);
@@ -56,7 +57,6 @@ const Courses = () => {
                 <div className='rounded-lg bg-white mt-10 md:mt-20 md:flex shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)]'>
                     <div className='w-full md:w-[35%] gap-0.5 md:gap-2 p-1 md:p-5 flex md:flex-col'>
                         {courseData.map((course) => (
-                            
                             <div
                                 key={course.id}
                                 onClick={() => handleCourseClick(course)}
@@ -71,7 +71,6 @@ const Courses = () => {
                                     <p className='hidden md:block text-2xl font-medium'>{course.name}</p>
                                 </div>
                             </div>
-                            
                         ))}
                     </div>
                     <div className='p-4 md:p-8 md:w-[65%]'>

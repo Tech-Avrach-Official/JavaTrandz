@@ -29,6 +29,8 @@ import Chart from './components/ui/chart'
 import SideAction from './components/Side-Quick-Action/SideAction'
 import ChatBoat from './components/ChatBoat/ChatBoat'
 import ImageSlider from './components/ui/ImageSlider'
+import PageNotFound from './Pages/404-PageNotFound/PageNotFound'
+import Maintenance from './Pages/Maintenance/Maintenance'
 // import ChatBoat from './components/ChatBoat/ChatBoat'
 // import ChatBoat from './components/ChatBoat/ChatBoat'
 
@@ -73,6 +75,8 @@ function App({ className, ...props }) {
     {/* <ImageSlider/> */}
 {/* <Chart/> */}
     <Footer/>
+    <PageNotFound/>
+    <Maintenance/>
    </div>
 
     </>
