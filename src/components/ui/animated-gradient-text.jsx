@@ -4,7 +4,7 @@ export default function AnimatedGradientText({ children, className, }) {
     return (
         <div
             className={cn(
-                "group relative mx-auto flex w-full flex-row items-center justify-center bg-black px-4 py-1.5 text-sm font-medium backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] dark:bg-black/40",
+                "group relative mx-auto flex w-full flex-row items-center justify-center px-4 py-1.5 text-sm font-medium backdrop-blur-sm transition-shadow duration-500 ease-out [--bg-size:300%] dark:bg-black/40",
                 className,
             )}
         >
