@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook, faTwitter, faLinkedin, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -40,6 +41,9 @@ const Footer = () => {
                                 <li className='text-gray-400 cursor-pointer'>Services</li>
                                 <li className='text-gray-400 cursor-pointer'>Courses</li>
                                 <li className='text-gray-400 cursor-pointer'>Contact</li>
+                                <Link to='/pagenotfound'><li className='text-gray-400 cursor-pointer'>404 Page Not Found</li></Link>
+                                <Link to='/siteundermantainance'><li className='text-gray-400 cursor-pointer'>Site Under Mantainance</li></Link>
+                                
                             </ul>
                         </div>
                     </div>

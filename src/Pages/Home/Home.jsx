@@ -12,6 +12,7 @@ import ExploreCards from '@/components/Explore-Cards/ExploreCards'
 import SideAction from '@/components/Side-Quick-Action/SideAction'
 import ChatBoat from '@/components/ChatBoat/ChatBoat'
 import Footer from '@/components/Footer/Footer'
+import Popup from '../Popup'
 import PageNotFound from '@/Pages/404-PageNotFound/PageNotFound'
 import Maintenance from '@/Pages/Maintenance/Maintenance'
 
@@ -23,6 +24,7 @@ const Home = () => {
     <Hero/>
     {/* <FlipText/> */}
     <Report/>
+    <Popup Color={''}/>
     <Promote/>
     {/* <PromoteCard/> */}
     <Courses/>

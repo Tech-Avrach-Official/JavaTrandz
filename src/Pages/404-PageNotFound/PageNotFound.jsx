@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 
 const PageNotFound = () => {
     return (
@@ -12,7 +13,7 @@ const PageNotFound = () => {
                         </h1>
                         <p className='text-white text-center text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <div className='flex items-center justify-center'>
-                            <Button className='mt-5 bg-white text-black w-48 text-base'>back to home</Button>
+                            <Link to='/'><Button className='mt-5 bg-white text-black w-48 text-base'>back to home</Button></Link>
                         </div>
                     </div>
                 </div>

@@ -67,7 +67,7 @@ export const AboutCardLeft = ({ imgsrc }) => {
     return (
         <>
             <div className='w-full'>
-                <div className=" border border-red-600">
+                <div className="">
                     <div className='relative flex justify-start'>
                         <div className='w-[70%] border-4 py-5 pr-5 border-black'>
                             <div className='w-full h-60 md:h-72  bg-first bg-[linear-gradient(to_right,#80808035_1px,transparent_1px),linear-gradient(to_bottom,#80808035_1px,transparent_1px)] bg-[size:14px_14px]'>

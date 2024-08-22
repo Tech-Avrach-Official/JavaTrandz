@@ -7,18 +7,21 @@ import { cn } from '@/lib/utils'
 // import chevr
 import { ChevronRight } from 'lucide-react'
 import Footer from '@/components/Footer/Footer'
+import backgroundimg from '@/assets/backgroundimg.png'
+import SideAction from '@/components/Side-Quick-Action/SideAction'
 
 const About = () => {
     return (
         <div>
-            <InfoStrip />
+            {/* <InfoStrip /> */}
             <Navbar />
+            <SideAction/>
             {/* <div className='flex items-center justify-center gap-10 pl-10'>
                 <div className='w-1/2' ><AboutText /></div>
                 <div className='w-1/2' ><AboutCard /></div>
             </div> */}
 
-<div class="relative h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${"https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg"})` }}>
+            <div class="relative h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${"https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg"})` }}>
                 <svg class="absolute bottom-0 left-0 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#fff" fill-opacity="1" d="M0,128L120,144C240,160,480,192,720,192C960,192,1200,160,1320,144L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
                 </svg>
@@ -47,15 +50,15 @@ const About = () => {
                 alignment={"tre"}
             />
 
-<AboutInfo
+            <AboutInfo
                 aboutheading={"Lorem ipsum dolor sit amet consectetur."}
                 abouttext={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum consequuntur nulla tenetur delectus, adipisci quibusdam odio placeat. Dolorem ducimus magnam quis. Corrupti adipisci modi tempore officia numquam architecto minus recusandae doloribus perferendis. Neque est exercitationem fuga quidem impedit cumque eligendi hic excepturi laborum, saepe tempore in ducimus doloremque ipsam quia maxime reprehenderit veritatis totam ad nemo possimus. Expedita adipisci, optio quibusdam voluptatum ullam, id ipsa dolor non fugit velit voluptates autem alias sunt ratione consectetur sint vero assumenda commodi placeat dolore totam! Vero fuga beatae magnam aspernatur, perferendis vel laudantium laboriosam eos tenetur quia accusamus, esse similique libero voluptate accusantium!"}
                 imgsrc={"https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg"}
                 alignment={"tue"}
             />
-            <Footer/>
+            <Footer />
         </div>
-        
+
     )
 }
 
@@ -68,7 +71,13 @@ export const AboutMiddleContainer = () => {
         <>
             <div className='pb-32'>
                 <div className='relative px-3 md:px-10 lg:px-40 py-10'>
-                    <div className=' bg-first bg-[linear-gradient(to_right,#80808035_1px,transparent_1px),linear-gradient(to_bottom,#80808035_1px,transparent_1px)] bg-[size:14px_14px] h-[500px] md:h-[600px] rounded-3xl'>
+                    <div  style={{ 
+                            backgroundImage: `url(${backgroundimg})`,
+                            backgroundSize: 'cover', // Ensures the image is fully visible
+                            backgroundPosition: 'center', // Centers the image horizontally and vertically
+                            backgroundRepeat: 'no-repeat'
+                             // Prevents the image from repeating
+                        }}  className=' bg-first  h-[500px] md:h-[600px] rounded-3xl'>
                         <div className='absolute bottom-0 left-[50%] translate-x-[-50%] w-[320px] h-[300px] md:w-[550px] md:h-[420px]'>
                             <div className='w-full flex items-center justify-center'>
                                 <div className='w-64 h-14 md:h-16 md:w-96 rounded-xl bg-white flex items-center justify-center'>

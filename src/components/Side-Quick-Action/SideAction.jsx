@@ -26,7 +26,7 @@ const SideAction = () => {
 
     return (
         <div 
-            className={`fixed left-0 top-1/2 transform -translate-y-1/2 ${isTransparent ? 'opacity-50' : ''}`} 
+            className={`z-50 fixed left-0 top-1/2 transform -translate-y-1/2 ${isTransparent ? 'opacity-50' : ''}`} 
             style={{ transition: 'opacity 0.5s ease' }}
             onMouseEnter={() => handleScroll()}
             

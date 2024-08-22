@@ -14,34 +14,19 @@ import {
 import { Switch } from "@/components/ui/switch"
 import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
-// import ChatBoat from './components/ChatBoat/ChatBoat'
-// import ChatBoat from './components/ChatBoat/ChatBoat'
-
-// ChatBoat
+import { BrowserRouter as Router } from 'react-router-dom'
+import Main from './Main/Main'
  
-const notifications = [
-  {
-    title: "Your call has been confirmed.",
-    description: "1 hour ago",
-  },
-  {
-    title: "You have a new message!",
-    description: "1 hour ago",
-  },
-  {
-    title: "Your subscription is expiring soon!",
-    description: "2 hours ago",
-  },
-]
-
 
 function App({ className, ...props }) {
 
   return (
     <>
    <div>
-   {/* <Home/> */}
-   <About/>
+   <Router>
+    <Main/>
+   </Router>
+   
    </div>
 
     </>
