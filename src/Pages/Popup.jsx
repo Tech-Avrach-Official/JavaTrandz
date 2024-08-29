@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,22 +7,32 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { useState, useEffect } from "react"
-// import { Label } from "@/components/ui/label"
- 
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { handlePopup } from "@/Redux/features/popup/popupSlice";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function Popup({ Color }) {
-  const [bgColor, setBgColor] = useState(Color || "bg-first")
-  const [isOpen, setIsOpen] = useState(false)
 
-  useEffect(() => {
-    setIsOpen(true)
-  }, [])
+  const dispatch = useDispatch()
 
+  const { isOpen } = useSelector(state => state.popup);
+
+  const [bgColor, setBgColor] = useState(Color || "bg-first");
+
+const handlePopUpChange = () => {
+
+  dispatch(handlePopup(false))
+
+}
+
+// useEffect(() => {console.log(isOpen)},[isOpen])
+  
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={handlePopUpChange}>
       <DialogTrigger asChild>
+        {/* Button or any trigger can be placed here if needed */}
         {/* <Button variant="outline">Edit Profile</Button> */}
       </DialogTrigger>
       <DialogContent className={`sm:max-w-[425px] ${bgColor}`}>
@@ -41,9 +51,11 @@ export default function Popup({ Color }) {
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" variant="outline">Save changes</Button>
+          <Button type="submit" variant="outline">
+            Save changes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

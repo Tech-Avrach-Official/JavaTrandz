@@ -36,7 +36,7 @@ const Home = () => {
     {/* <ChatBoat/> */}
     <ChatBoat/>
     {/* <ImageSlider/> */}
-{/* <Chart/> */}
+    {/* <Chart/> */}
     <Footer/>
     {/* <PageNotFound/>
     <Maintenance/> */}
