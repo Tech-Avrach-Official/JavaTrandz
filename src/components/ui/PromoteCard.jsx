@@ -1,9 +1,52 @@
+import { useGSAP } from '@gsap/react'
 import React from 'react'
+import gsap from 'gsap';
 
 const PromoteCard = () => {
+
+    useGSAP(
+        () => {
+            // gsap code here...
+            gsap.from('#promote-card-1', {
+                scrollTrigger: {
+                    trigger: '#promote-card-parent',
+                    start: '20% bottom',
+                    markers: true,
+                    // scrub: true
+                    
+                },
+                opacity: 0,
+                // scale: 2,
+                x: -80,
+                duration: 0.5,
+                yoyo: true,
+                // smoothOrigin: true,
+                // stagger: 0.5,
+                // ease: 'power2.inOut'
+            });
+            gsap.from('#promote-card-2', {
+                scrollTrigger: {
+                    trigger: '#promote-card-parent',
+                    start: '20% bottom',
+                    markers: true,
+                    // scrub: true
+                    
+                },
+                opacity: 0,
+                // scale: 2,
+                x: 80,
+                duration: 0.5,
+                yoyo: true,
+                // smoothOrigin: true,
+                // stagger: 0.5,
+                // ease: 'power2.inOut'
+            });
+        },);
+ 
+
     return (
-        <div className='w-full lg:flex gap-5'>
-            <div className='relative w-full lg:w-1/2 rounded-lg md:flex hover:scale-[1.01] duration-300'>
+        <div id='promote-card-parent' className='w-full lg:flex gap-5'>
+            <div id='promote-card-1' className='relative w-full lg:w-1/2 rounded-lg md:flex hover:scale-[1.01] duration-300'>
                 <div className='w-full flex sm:flex-col p-4 md:w-[40%] lg:w-[45%] md:p-6 bg-black rounded-l-lg md:rounded-l-lg'>
                     <div className='text-2xl md:text-3xl mt-7 text-white font-semibold md:leading-normal'>18-Month PG Program in Mgmt & Tech</div>
                     {/* <div className='md:mt-7 flex items-center'><img className='w-28' src="https://assets-v2.scaler.com/assets/scaler/svg/mba-logo-bd22b1c79073b6e41788739397491760d704eae64728806ebb8120db5957e5b4.svg.gz" alt="" /></div> */}
@@ -43,7 +86,7 @@ const PromoteCard = () => {
                 </div>
                 <div className='absolute top-0 left-10 w-14 h-8 md:h-10 bg-white font-semibold text-black rounded-b-lg p-1 md:p-2 text-center'>NEW</div>
             </div>
-            <div className='w-full lg:w-1/2 md:flex mt-5 md:mt-0 hover:scale-[1.01] duration-300'>
+            <div id='promote-card-2' className='w-full lg:w-1/2 md:flex mt-5 md:mt-0 hover:scale-[1.01] duration-300'>
                 <div className='w-full flex sm:flex-col p-4 md:w-[40%] lg:w-[45%] md:p-6 bg-second rounded-l-lg md:rounded-l-lg'>
                     <div className='text-2xl md:text-3xl mt-7 text-white font-semibold md:leading-normal'>18-Month PG Program in Mgmt & Tech</div>
                     {/* <div className='md:mt-7 flex items-center'><img className='w-28' src="https://assets-v2.scaler.com/assets/scaler/svg/mba-logo-bd22b1c79073b6e41788739397491760d704eae64728806ebb8120db5957e5b4.svg.gz" alt="" /></div> */}

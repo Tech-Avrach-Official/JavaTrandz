@@ -4,6 +4,8 @@ import lineRight from '../../assets/line-right.svg'
 import { Button } from '../ui/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faJava, faNode, faPython, faReact, faSquareJs } from '@fortawesome/free-brands-svg-icons'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const courseData = [
     {
@@ -46,8 +48,27 @@ const Courses = () => {
         setSelectedCourse(course);
     }
 
+    useGSAP(
+        () => {
+            // gsap code here...
+            gsap.from('#courses-icon', {
+                scrollTrigger: {
+                    trigger: '#courses-parent',
+                    start: '30% bottom',
+                    markers: true,
+                },
+                opacity: 0,
+                // scale: 2,
+                x: -50,
+                duration: 0.5,
+                // yoyo: true,
+                stagger: 0.3,
+            });
+        },);
+
+
     return (
-        <div className='px-3 md:px-10 lg:px-32 bg-[#F8F8F8] p-10 md:pt-20'>
+        <div id='courses-parent' className='px-3 md:px-10 lg:px-32 bg-[#F8F8F8] p-10 md:pt-20'>
             <div>
                 <div className='flex items-center justify-center gap-4'>
                     <img className='hidden md:block lg:w-[full]' src={lineLeft} alt="" />
@@ -56,17 +77,17 @@ const Courses = () => {
                 </div>
                 <div className='rounded-lg bg-white mt-10 md:mt-20 md:flex shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)]'>
                     <div className='w-full md:w-[35%] gap-0.5 md:gap-2 p-1 md:p-5 flex md:flex-col'>
+                        
                         {courseData.map((course) => (
                             <div
                                 key={course.id}
                                 onClick={() => handleCourseClick(course)}
-                                className={`border h-14 w-1/2 md:w-full md:h-24 rounded-sm md:rounded-md lg:px-8 flex items-center justify-center md:justify-normal cursor-pointer duration-300 ${
-                                    selectedCourse && selectedCourse.id === course.id
+                                className={`border h-14 w-1/2 md:w-full md:h-24 rounded-sm md:rounded-md lg:px-8 flex items-center justify-center md:justify-normal cursor-pointer duration-300 ${selectedCourse && selectedCourse.id === course.id
                                         ? 'scale-[1.03] bg-second text-white' // Active state styles
                                         : 'bg-black text-white' // Inactive state styles
-                                }`}
+                                    }`}
                             >
-                                <div className='flex justify-center items-center gap-7'>
+                                <div id='courses-icon' className='flex justify-center items-center gap-7'>
                                     <FontAwesomeIcon icon={course.icon} className='text-3xl lg:text-6xl' />
                                     <p className='hidden md:block text-2xl font-medium'>{course.name}</p>
                                 </div>

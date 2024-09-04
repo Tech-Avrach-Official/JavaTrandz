@@ -16,6 +16,7 @@ import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Main from './Main/Main'
+
  
 
 function App({ className, ...props }) {

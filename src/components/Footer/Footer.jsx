@@ -3,6 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook, faTwitter, faLinkedin, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 
+<<<<<<<<<<<<<<  ✨ Codeium Command ⭐  >>>>>>>>>>>>>>>>
+/**
+ * Footer
+ *
+ * This component renders the footer of the website. It
+ * contains the company logo, navigation links, social media
+ * links, and copyright information.
+ *
+ * @returns {React.ReactElement} The footer component
+ */
+<<<<<<<  fa8c7629-bf81-4a95-994d-fcabacebb3f9  >>>>>>>
 const Footer = () => {
     return (
         <div className='bg-[#000000] px-5 md:px-28 xl:px-48 py-8 md:py-14'>

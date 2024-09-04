@@ -7,6 +7,10 @@ import { Routes, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('../Pages/Home/Home'));
 const About = lazy(() => import('@/Pages/About/About'));
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 
 const RoutesComponent = () => {
   return (

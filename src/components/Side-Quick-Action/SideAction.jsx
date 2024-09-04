@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faTwitter, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { useSelector } from 'react-redux';
 
 const SideAction = () => {
     const [isTransparent, setIsTransparent] = useState(false);
@@ -24,30 +27,43 @@ const SideAction = () => {
         };
     }, []);
 
+    const { isOpen } = useSelector(state => state.popup);
+
+    useGSAP(() => {
+        if (!isOpen) {
+            // Trigger GSAP animations only when isOpen becomes false
+            gsap.from('#sideAction', {
+                x: -100,
+                duration: 1,
+            });
+        }
+    }, [isOpen]);
+
     return (
-        <div 
-            className={`z-50 fixed left-0 top-1/2 transform -translate-y-1/2 ${isTransparent ? 'opacity-50' : ''}`} 
+        <div
+            id='sideAction'
+            className={`z-50 fixed left-0 top-1/2 transform -translate-y-1/2 ${isTransparent ? 'opacity-50' : ''}`}
             style={{ transition: 'opacity 0.5s ease' }}
             onMouseEnter={() => handleScroll()}
-            
-            // Added transition for smooth effect
+
+        // Added transition for smooth effect
         >
             <div>
-                <div className="flex flex-col items-center gap-4 text-black bg-black rounded-r-lg p-1">
-                    <div className='bg-second rounded-full p-2 w-10 flex items-center justify-center cursor-pointer'>
-                        <FontAwesomeIcon icon={faInstagram} className='text-white text-2xl' />
+                <div className="flex flex-col items-center gap-2 md:gap-4 text-black bg-black rounded-r-lg p-2">
+                    <div className='cursor-pointer'>
+                        <FontAwesomeIcon icon={faInstagram} className='text-white md:text-3xl text-2xl' />
                     </div>
                     <div className='cursor-pointer'>
-                        <FontAwesomeIcon icon={faFacebook} className='text-white text-3xl' />
+                        <FontAwesomeIcon icon={faFacebook} className='text-white md:text-3xl text-2xl' />
                     </div>
                     <div className='cursor-pointer'>
-                        <FontAwesomeIcon icon={faTwitter} className='text-white text-3xl' />
+                        <FontAwesomeIcon icon={faTwitter} className='text-white md:text-3xl text-2xl' />
                     </div>
                     <div className='cursor-pointer'>
-                        <FontAwesomeIcon icon={faLinkedin} className='text-white text-3xl' />
+                        <FontAwesomeIcon icon={faLinkedin} className='text-white md:text-3xl text-2xl' />
                     </div>
                     <div className='cursor-pointer'>
-                        <FontAwesomeIcon icon={faYoutube} className='text-white text-3xl' />
+                        <FontAwesomeIcon icon={faYoutube} className='text-white md:text-3xl text-2xl' />
                     </div>
                 </div>
             </div>
