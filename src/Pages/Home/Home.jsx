@@ -15,6 +15,7 @@ import Footer from '@/components/Footer/Footer'
 import Popup from '../Popup'
 import PageNotFound from '@/Pages/404-PageNotFound/PageNotFound'
 import Maintenance from '@/Pages/Maintenance/Maintenance'
+import Live from '@/components/Live-Info/Live'
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
     <Promote/>
     {/* <PromoteCard/> */}
     <Courses/>
+    <Live/>
     <CardInfo/>
     <Desgine/>
     <MultipleCard/>

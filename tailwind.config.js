@@ -72,8 +72,8 @@ module.exports = {
         gradient: {
           to: {
             backgroundPosition: "var(--bg-size) 0",
-      },
-      },
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -81,12 +81,29 @@ module.exports = {
         gradient: "gradient 8s linear infinite",
 
       },
+
+
     },
+    keyframes: {
+      blinkGreen: {
+        '0%, 100%': { boxShadow: '0 0 1px 1px rgba(143, 242, 62)' },
+        '50%': { boxShadow: '0 0 8px 2px rgba(143, 242, 62)' },
+      },
+      blinkRed: {
+        '0%, 100%': { boxShadow: '0 0 1px 1px rgba(231, 29, 69)' },
+        '50%': { boxShadow: '0 0 8px 2px rgba(231, 29, 69)' },
+      },
+    },
+    animation: {
+      blinkGreen: 'blinkGreen 1.2s infinite',
+      blinkRed: 'blinkRed 1.2s infinite',
+    },
+
     boxShadow: {
       'custom-inset': '10px -1px 99px 31px rgba(0, 0, 0) inset',
     },
-  
-    
+
+
   },
   plugins: [require("tailwindcss-animate")],
 }

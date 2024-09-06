@@ -77,14 +77,14 @@ const Courses = () => {
                 </div>
                 <div className='rounded-lg bg-white mt-10 md:mt-20 md:flex shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)]'>
                     <div className='w-full md:w-[35%] gap-0.5 md:gap-2 p-1 md:p-5 flex md:flex-col'>
-                        
+
                         {courseData.map((course) => (
                             <div
                                 key={course.id}
                                 onClick={() => handleCourseClick(course)}
                                 className={`border h-14 w-1/2 md:w-full md:h-24 rounded-sm md:rounded-md lg:px-8 flex items-center justify-center md:justify-normal cursor-pointer duration-300 ${selectedCourse && selectedCourse.id === course.id
-                                        ? 'scale-[1.03] bg-second text-white' // Active state styles
-                                        : 'bg-black text-white' // Inactive state styles
+                                    ? 'scale-[1.03] bg-second text-white' // Active state styles
+                                    : 'bg-black text-white' // Inactive state styles
                                     }`}
                             >
                                 <div id='courses-icon' className='flex justify-center items-center gap-7'>
