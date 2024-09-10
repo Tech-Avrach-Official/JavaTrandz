@@ -9,6 +9,7 @@ const Home = lazy(() => import('../Pages/Home/Home'));
 const About = lazy(() => import('@/Pages/About/About'));
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Services from '@/Pages/Services/Services';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -20,6 +21,7 @@ const RoutesComponent = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/service' element={<Services />} />
           <Route path='/pagenotfound' element={<PageNotFound />} />
           <Route path='/siteundermantainance' element={<Maintenance />} />
 

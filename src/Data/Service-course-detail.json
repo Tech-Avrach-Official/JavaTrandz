@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "name": "Beginner",
+        "period": 11.5,
+        "modules": [
+            {
+                "id": 1,
+                "name": "Programming Language Fundamentals",
+                "period": 2,
+                "summeryTitle": "Programming Language Fundamentals",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Java OOPs",
+                "period": 3,
+                "summeryTitle": "Java OOPs",
+                "summery": [
+                    "Time and Space Complexity",
+                    "Array Problem Solving Techniques",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Java Collections",
+                "period": 3,
+                "summeryTitle": "Java Collections",
+                "summery": [
+                    "Relational Model",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Java Exception Handling",
+                "period": 6,
+                "summeryTitle": "Java Exception Handling",
+                "summery": [
+                    "Introduction to Java",
+                    "Relational Model",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Java Multithreading",
+                "period": 2,
+                "summeryTitle": "Java Multithreading",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Relational Model"
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Java Multithreading",
+                "period": 2,
+                "summeryTitle": "Java Multithreading",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Relational Model"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Intermediate",
+        "period": 12,
+        "modules": [
+            {
+                "id": 1,
+                "name": "DSA: Introduction to Problem Solving",
+                "period": 4,
+                "summeryTitle": "Java OOPs",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "DSA: Data Structures and Algorithms",
+                "period": 3,
+                "summeryTitle": "Java OOPs",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "SQL",
+                "period": 3,
+                "summeryTitle": "Java Collections",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "LLD",
+                "period": 3,
+                "summeryTitle": "Java Exception Handling",
+                "summery": [
+                    "ILLD",
+                    "Input Output and Data Types",
+                    "LLD"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Capstone Project",
+                "period": 2,
+                "summeryTitle": "Capstone Project",
+                "summery": [
+                    "Introduction to Java",
+                    "Capstone Project",
+                    "Operators"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Advanced",
+        "period": 9,
+        "modules": [
+            {
+                "id": 1,
+                "name": "Electives",
+                "period": 6,
+                "summeryTitle": "Electives",
+                "summery": [
+                    "Electives",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "DSA: Data Structures and Algorithms",
+                "period": 1,
+                "summeryTitle": "DSA: Data Structures and Algorithms",
+                "summery": [
+                    "Introduction to Java",
+                    "advanced",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "SQL advanced",
+                "period": 3,
+                "summeryTitle": "SQL advanced",
+                "summery": [
+                    "Introduction to Java advanced",
+                    "advanced",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "LLD advanced",
+                "period": 2,
+                "summeryTitle": "LLD advanced",
+                "summery": [
+                    "Introduction to Java",
+                    "Input Output and Data Types",
+                    "Operators"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Capstone Project advanced",
+                "period": 9,
+                "summeryTitle": "Capstone Project advanced",
+                "summery": [
+                    "Introduction to Java",
+                    "advanced",
+                    "Operators"
+                ]
+            }
+        ]
+    }
+]
