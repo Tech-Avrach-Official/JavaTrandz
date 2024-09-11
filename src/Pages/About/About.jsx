@@ -1,14 +1,14 @@
 import AboutInfo from '@/components/About-Component/About-Information/AboutInfo'
-import InfoStrip from '@/components/Information-Strip/InfoStrip'
+import InfoStrip from '@/components/Layout/Information-Strip/InfoStrip'
 import Navbar from '@/components/Layout/Navbar/Navbar'
 import React from 'react'
 import AnimatedGradientText from '@/components/ui/animated-gradient-text'
 import { cn } from '@/lib/utils'
 // import chevr
 import { ChevronRight } from 'lucide-react'
-import Footer from '@/components/Footer/Footer'
+import Footer from '@/components/Layout/Footer/Footer'
 import backgroundimg from '@/assets/backgroundimg.png'
-import SideAction from '@/components/Side-Quick-Action/SideAction'
+import SideAction from '@/components/Layout/Side-Quick-Action/SideAction'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 

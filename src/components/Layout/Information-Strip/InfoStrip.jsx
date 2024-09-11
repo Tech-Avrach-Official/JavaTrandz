@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
 

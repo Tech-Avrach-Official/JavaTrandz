@@ -6,9 +6,9 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { Button } from '../ui/button'
+import { Button } from '../../ui/button'
 // import chart from '../ui/chart'
-import Chart from '../ui/chart'
+import Chart from '../../ui/chart'
 
 
 const Report = () => {

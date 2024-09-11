@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import Navbar from '../components/Layout/Navbar/Navbar'; // Ensure you have this component
-import Footer from '../components/Footer/Footer'; // Ensure you have this component
+import Footer from '../components/Layout/Footer/Footer'; // Ensure you have this component
 import RoutesComponent from '../Routes/RoutesComponent'; // Import the routes component
-import InfoStrip from '@/components/Information-Strip/InfoStrip';
-import SideAction from '@/components/Side-Quick-Action/SideAction';
+import InfoStrip from '@/components/Layout/Information-Strip/InfoStrip';
+import SideAction from '@/components/Layout/Side-Quick-Action/SideAction';
 
 const Main = () => {
   return (

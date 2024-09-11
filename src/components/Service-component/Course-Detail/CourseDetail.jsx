@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from '../ui/button';
-import data from '../../../src/Data/Service-course-detail.json';
+import { Button } from '../../ui/button';
+import data from '../../../../src/Data/Service-course-detail.json';
 
 const CourseDetail = () => {
   const [activeLevel, setActiveLevel] = useState(0);

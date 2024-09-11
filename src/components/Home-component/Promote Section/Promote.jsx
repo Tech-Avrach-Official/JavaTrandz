@@ -1,7 +1,7 @@
 import React from 'react'
-import lineLeft from '../../assets/line-left.svg'
-import lineRight from '../../assets/line-right.svg'
-import PromoteCard from '../ui/PromoteCard'
+import lineLeft from '../../../assets/line-left.svg'
+import lineRight from '../../../assets/line-right.svg'
+import PromoteCard from '../../ui/PromoteCard'
 
 const Promote = () => {
     return (
