@@ -5,7 +5,7 @@ import PromoteCard from '../../ui/PromoteCard'
 
 const Promote = () => {
     return (
-        <div className='px-3 md:px-10 lg:px-24 bg-[#F8F8F8]'>
+        <div className='md:px-10 lg:px-24 bg-[#F8F8F8]'>
             <div>
                 <div>
                     <div className='text-3xl md:text-4xl font-normal text-center'>

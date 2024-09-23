@@ -40,15 +40,15 @@ const Report = () => {
 
     return (
         <div className='py-12 px-3 md:p-24 bg-[#F8F8F8]'>
-            <div className='rounded-xl xl:px-32 p-5 shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)] bg-white'>
+            <div className='rounded-xl xl:px-32 py-5 shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)] bg-white'>
                 <div className='text-2xl md:text-4xl font-normal text-center'>Java Trandze's Historical <span className='font-semibold'>Career Transition Report</span>
                 </div>
-                <div className='mt-5 xl:p-5 lg:flex md:mt-10'>
+                <div className='mt-5 xl:p-5 lg:flex md:mt-10 '>
                     <div className='w-full lg:w-[50%]'>
                         <Chart value={value} />
                     </div>
-                    <div className='lg:w-[50%] mt-5 md:mt-0 md:border-2 md:border-black rounded-lg'>
-                        <div className='text-center mt-5 text-base lg:text-xl font-semibold -tracking-tight'>
+                    <div className='lg:w-[50%] mt-5 md:mt-0  md:border md:border-black  rounded-lg'>
+                        <div className='text-center mt-5 text-base lg:text-xl  font-semibold -tracking-tight'>
                             Lorem, ipsum.
                         </div>
                         <div className='flex flex-col gap-5 items-center justify-center mt-5 md:mt-16'>
