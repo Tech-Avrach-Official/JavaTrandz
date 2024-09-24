@@ -39,8 +39,8 @@ const CourseDetail = () => {
       <div className=''>
         <div className='text-2xl md:text-3xl font-normal text-center'>
           <span className='font-semibold'>Curriculum </span>
-          is designed to make you a
-          <span className='font-semibold'>solid engineer</span>
+          is designed to make you a 
+          <span className='font-semibold'> solid engineer</span>
         </div>
         <div className='flex items-center justify-center gap-5 mt-10'>
           {

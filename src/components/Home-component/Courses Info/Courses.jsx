@@ -59,7 +59,7 @@ const Courses = () => {
                 },
                 opacity: 0,
                 // scale: 2,
-                x: -50,
+                // x: -50,
                 duration: 0.5,
                 // yoyo: true,
                 stagger: 0.3,

@@ -5,13 +5,16 @@ import React from 'react'
 import LiveLearning from '@/components/Service-component/Live-Learning/LiveLearning'
 import ServiceExplore from '@/components/Service-component/Service-Explore/ServiceExplore'
 import MobCourseDetail from '@/components/Service-component/Course-Detail/MobCourseDetail'
+import ServiceHeader from '@/components/Service-component/Service-header/ServiceHeader'
+import ExploreCards from '@/components/Home-component/Explore-Cards/ExploreCards'
+import Live from '@/components/Home-component/Live-Info/Live'
 
 const Services = () => {
   return (
     <div>
       <Navbar />
+      <ServiceHeader />
       <LiveLearning />
-      <ServiceExplore />
       <div>
         <div className="hidden lg:block">
           <CourseDetail />
@@ -21,6 +24,9 @@ const Services = () => {
         </div>
 
       </div>
+      <Live />
+      <ServiceExplore />
+      <ExploreCards />
       <Footer />
     </div>
   )
