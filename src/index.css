@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-shadow{
+  -webkit-box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
+-moz-box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
+box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
 }

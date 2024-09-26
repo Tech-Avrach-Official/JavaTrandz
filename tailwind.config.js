@@ -81,6 +81,9 @@ module.exports = {
         gradient: "gradient 8s linear infinite",
 
       },
+      boxShadow: {
+        'custom': '1px 7px 10px -3px rgba(163, 163, 163, 1)',
+      },
 
 
     },
@@ -98,12 +101,6 @@ module.exports = {
       blinkGreen: 'blinkGreen 1.2s infinite',
       blinkRed: 'blinkRed 1.2s infinite',
     },
-
-    boxShadow: {
-      'custom-inset': '10px -1px 99px 31px rgba(0, 0, 0) inset',
-    },
-
-
   },
   plugins: [require("tailwindcss-animate")],
 }

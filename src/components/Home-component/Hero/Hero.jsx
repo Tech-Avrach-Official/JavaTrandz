@@ -13,22 +13,22 @@ const Hero = ({ }) => {
 
   const { isOpen } = useSelector(state => state.popup);
 
-  useGSAP(() => {
-    if (!isOpen) {
-      // Trigger GSAP animations only when isOpen becomes false
-      gsap.from('#form', {
-        opacity: 0,
-        duration: 1,
-      });
+  // useGSAP(() => {
+  //   // if (!isOpen) {
+  //     // Trigger GSAP animations only when isOpen becomes false
+  //     gsap.from('#form', {
+  //       opacity: 0,
+  //       duration: 1,
+  //     });
   
-      gsap.from('#hero-heading', {
-        opacity: 0,
-        scale: 0.5,
-        duration: 1,
-        stagger: 0.5,
-      });
-    }
-  }, [isOpen]);
+  //     gsap.from('#hero-heading', {
+  //       opacity: 0,
+  //       scale: 0.5,
+  //       duration: 1,
+  //       stagger: 0.5,
+  //     });
+  //   }
+  // );
 
   return (
     <div>

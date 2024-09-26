@@ -8,6 +8,7 @@ import MobCourseDetail from '@/components/Service-component/Course-Detail/MobCou
 import ServiceHeader from '@/components/Service-component/Service-header/ServiceHeader'
 import ExploreCards from '@/components/Home-component/Explore-Cards/ExploreCards'
 import Live from '@/components/Home-component/Live-Info/Live'
+import SideAction from '@/components/Layout/Side-Quick-Action/SideAction'
 
 const Services = () => {
   return (
@@ -27,6 +28,7 @@ const Services = () => {
       <Live />
       <ServiceExplore />
       <ExploreCards />
+      <SideAction />
       <Footer />
     </div>
   )

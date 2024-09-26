@@ -34,9 +34,10 @@ const Sidebar = () => {
 
     return (
         <div>   
-            <Sheet>
+            <Sheet >
                 <SheetTrigger>Click here</SheetTrigger>
                 <SheetContent>
+
                 <SheetHeader>
                         <VisuallyHidden>
                             <SheetTitle>Sidebar Menu</SheetTitle>
