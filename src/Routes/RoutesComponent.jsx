@@ -9,9 +9,11 @@ const Home = lazy(() => import('../Pages/Home/Home'));
 const About = lazy(() => import('@/Pages/About/About'));
 const Services = lazy(() => import('@/Pages/Services/Services'));
 const Blog = lazy(() => import('@/Pages/Blog/Blog'));
+const Contact = lazy(() => import('@/Pages/Contact/Contact'));
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import BlogPage from '@/components/Blog-component/Blog-Page/BlogPage';
+// import Contact from '@/Pages/Contact/Contact';
 // import Blog from '@/Pages/Blog/Blog';
 // import Services from '@/Pages/Services/Services';
 gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +30,8 @@ const RoutesComponent = () => {
           <Route path='/service' element={<Services />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/blogpage' element={<BlogPage /> } />
+          <Route path='/contact' element={<Contact /> } />
+
           <Route path='/pagenotfound' element={<PageNotFound />} />
           <Route path='/siteundermantainance' element={<Maintenance />} />
 

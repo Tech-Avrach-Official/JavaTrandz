@@ -22,7 +22,10 @@ const Navbar = () => {
                         <Link to={'/blog'}>
                             <li className='hidden md:block text-base font-medium text-gray-700 hover:border-gray-800 py-1 px-3 rounded-md hover:bg-gray-100 duration-200 cursor-pointer' >Blog</li>
                         </Link>
+                        <Link to={'/contact'}>
                         <li className='hidden md:block text-base font-medium text-gray-700 hover:border-gray-800 py-1 px-3 rounded-md hover:bg-gray-100 duration-200 cursor-pointer' >Contact</li>
+                        </Link>
+                        
                     </ul>
                 </div>
                 <div className='hidden md:block'><Button>Quick Action</Button></div>

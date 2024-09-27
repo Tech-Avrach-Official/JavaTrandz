@@ -75,27 +75,27 @@ const Courses = () => {
                     <span className='text-base lg:text-xl font-semibold -tracking-tight'>ON-CAMPUS PROGRAMS</span>
                     <img className='hidden md:block lg:w-[full]' src={lineRight} alt="" />
                 </div>
-                <div className='rounded-lg bg-white mt-10 md:mt-20 md:flex shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)]'>
-                    <div className='w-full md:w-[35%] gap-0.5 md:gap-2 p-1 md:p-5 flex md:flex-col'>
+                <div className='rounded-lg bg-white mt-10 md:mt-20 flex flex-col lg:flex-row shadow-[0px_6px_15px_3px_rgba(204,204,204,0.59)]'>
+                    <div className='w-full lg:w-[35%] gap-0.5 md:gap-2 p-1 md:p-5 flex flex-row lg:flex-col'>
 
                         {courseData.map((course) => (
                             <div
                                 key={course.id}
                                 onClick={() => handleCourseClick(course)}
-                                className={`border h-14 w-1/2 md:w-full md:h-24 rounded-sm md:rounded-md lg:px-8 flex items-center justify-center md:justify-normal cursor-pointer duration-300 ${selectedCourse && selectedCourse.id === course.id
+                                className={`border h-14 w-1/2 md:w-full md:h-24 rounded-sm md:rounded-md lg:px-8 flex items-center justify-center lg:justify-normal cursor-pointer duration-300 ${selectedCourse && selectedCourse.id === course.id
                                     ? 'scale-[1.03] bg-second text-white' // Active state styles
                                     : 'bg-black text-white' // Inactive state styles
                                     }`}
                             >
                                 <div id='courses-icon' className='flex justify-center items-center gap-7'>
-                                    <FontAwesomeIcon icon={course.icon} className='text-3xl lg:text-6xl' />
-                                    <p className='hidden md:block text-2xl font-medium'>{course.name}</p>
+                                    <FontAwesomeIcon icon={course.icon} className='text-3xl md:text-6xl' />
+                                    <p className='hidden lg:block text-2xl font-medium'>{course.name}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className='p-4 md:p-8 md:w-[65%]'>
-                        <div className='h-[85%]'>
+                    <div className='p-4 flex flex-col justify-between md:p-8 lg:w-[65%]'>
+                        <div className=''>
                             {selectedCourse ? (
                                 <div className='text-2xl md:text-3xl font-normal text-center mt-5'>
                                     {selectedCourse.name}'s Historical <span className='font-semibold'>Career Transition Report</span>

@@ -32,6 +32,7 @@ const Hero = ({ }) => {
 
   return (
     <div>
+      
       <div className='sm:px-[5%] inset-0 h-full w-full bg-first bg-[linear-gradient(to_right,#80808035_1px,transparent_1px),linear-gradient(to_bottom,#80808035_1px,transparent_1px)] bg-[size:24px_24px] '>
         <div className='lg:flex p-3 md:p-0' >
           <div className='relative lg:w-[50%] xl:w-[65%] w-full h-full pt-10 md:p-5 text-center'>
