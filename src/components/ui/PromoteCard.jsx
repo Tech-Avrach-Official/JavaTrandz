@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import React from 'react'
 import gsap from 'gsap';
 
-const PromoteCard = () => {
+const  PromoteCard = () => {
 
     // useGSAP(
     //     () => {
@@ -47,7 +47,7 @@ const PromoteCard = () => {
     return (
         <div id='promote-card-parent' className='w-full px-4 py-4 flex flex-col lg:flex-row gap-5 overflow-x-hidden'>
             <div id='promote-card-1' className='relative w-full hover:scale-[1.02] lg:w-1/2 flex flex-col md:flex-row duration-300'>
-                <div className='w-full flex sm:flex-col p-4 md:w-[40%] lg:w-[45%] md:p-6 bg-black rounded-t-lg md:rounded-l-lg'>
+                <div className='w-full flex flex-row sm:flex-col p-4 md:w-[40%] lg:w-[45%] md:p-6 bg-black rounded-t-lg md:rounded-l-lg'>
                     <div className='text-2xl md:text-3xl mt-7 text-white font-semibold md:leading-normal'>18-Month PG Program in Mgmt & Tech</div>
                     {/* <div className='md:mt-7 flex items-center'><img className='w-28' src="https://assets-v2.scaler.com/assets/scaler/svg/mba-logo-bd22b1c79073b6e41788739397491760d704eae64728806ebb8120db5957e5b4.svg.gz" alt="" /></div> */}
                 </div>

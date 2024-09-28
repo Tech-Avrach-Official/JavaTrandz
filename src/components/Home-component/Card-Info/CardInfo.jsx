@@ -10,7 +10,7 @@ const CardInfo = () => {
                 scrollTrigger: {
                     trigger: '#card-info-parent',
                     start: '20% bottom',
-                    markers: true,
+                    // markers: true,
                 },
                 opacity: 0,
                 scale: 0.8,
@@ -23,7 +23,7 @@ const CardInfo = () => {
                 scrollTrigger: {
                     trigger: '#card-info-parent',
                     start: '40% bottom',
-                    markers: true,
+                    // markers: true,
                 },
                 opacity: 0,
                 // scale: 0.8,

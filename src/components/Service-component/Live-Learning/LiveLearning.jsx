@@ -6,13 +6,13 @@ import { faJava } from '@fortawesome/free-brands-svg-icons'
 
 const LiveLearning = () => {
     return (
-        <div className='w-full bg-[#F8F8F8] py-10 px-4 xl:px-32'>
+        <div className='w-full bg-[#F8F8F8] py-10 md:py-20 px-4 xl:px-32'>
             <div className='flex items-center justify-center gap-4'>
                 <img className='hidden md:block lg:w-[full]' src={lineLeft} alt="" />
                 <span className='text-base lg:text-xl font-semibold -tracking-tight'>LIVE SECTIONS</span>
                 <img className='hidden md:block lg:w-[full]' src={lineRight} alt="" />
             </div>
-            <div className='py-10 h-full'>
+            <div className='pt-10 md:pt-20 h-full'>
                 <div className="grid grid-cols-2 gap-3 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4" style={{ "grid-auto-rows": "86px" }} >
                     <div
                         className="bg-white row-start-1 row-end-3 col-span-2 md:col-span-1 md:row-start-1 md:row-end-3 lg:row-start-1 lg:row-end-3 border border-gray-400 rounded-xl">

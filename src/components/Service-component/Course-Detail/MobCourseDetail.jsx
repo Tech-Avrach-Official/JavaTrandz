@@ -79,10 +79,12 @@ const MobCourseDetail = () => {
                         className={`duration-300 hover:scale-[1.02] drop-shadow-md rounded-md px-4 py-5 cursor-pointer 
                           ${selectedModule && selectedModule.id === item.id ? 'bg-first scale-[1.02] text-white' : 'bg-white text-first'}`}
                       >
+                        <div className="py-2">
                         <div className='text-xs'>MODULE - {item.id}</div>
-                        <div className={`flex justify-between ${expandedModule === item.id ? "pb-4" : "pb-0"}`}>
-                          <p className='text-md lg:text-xl font-semibold'>{item.name}</p>
+                        <div className={`flex justify-between `}>
+                          <p className='text-md lg:text-xl font-bold'>{item.name}</p>
                           <p className='text-sm lg:text-md'>{item.period} Months</p>
+                        </div>
                         </div>
                         
                         {/* Drawer-like smooth expanding/collapsing effect */}

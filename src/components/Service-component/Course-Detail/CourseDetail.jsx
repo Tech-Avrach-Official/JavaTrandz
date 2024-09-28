@@ -35,7 +35,7 @@ const CourseDetail = () => {
   };
 
   return (
-    <div className='w-full bg-[#F8F8F8] px-4 py-10 xl:px-40'>
+    <div className='w-full bg-[#F8F8F8] px-4 pt-10 xl:px-40'>
       <div className=''>
         <div className='text-2xl md:text-3xl font-normal text-center'>
           <span className='font-semibold'>Curriculum </span>

@@ -20,7 +20,7 @@ import Live from '@/components/Home-component/Live-Info/Live'
 const Home = () => {
   return (
     <div>
-    <InfoStrip/>
+    {/* <InfoStrip/> */}
     <Navbar/>
     <Hero/>
     {/* <FlipText/> */}
@@ -37,11 +37,8 @@ const Home = () => {
     <SideAction/>
     {/* <ChatBoat/> */}
     <ChatBoat/>
-    {/* <ImageSlider/> */}
-    {/* <Chart/> */}
     <Footer/>
-    {/* <PageNotFound/>
-    <Maintenance/> */}
+   
     </div>
   )
 }

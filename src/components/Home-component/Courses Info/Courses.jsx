@@ -55,7 +55,7 @@ const Courses = () => {
                 scrollTrigger: {
                     trigger: '#courses-parent',
                     start: '30% bottom',
-                    markers: true,
+                    // markers: true,
                 },
                 opacity: 0,
                 // scale: 2,

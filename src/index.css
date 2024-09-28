@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
+
 .nav-shadow{
   -webkit-box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
 -moz-box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);

@@ -10,7 +10,7 @@ const MultipleCard = () => {
                 scrollTrigger: {
                     trigger: '#multiple-card-parent',
                     start: '20% bottom',
-                    markers: true,
+                    // markers: true,
                 },
                 opacity: 0,
                 scale: 0.8,
@@ -26,7 +26,7 @@ const MultipleCard = () => {
         <div id='multiple-card-parent' className='px-3 lg:px-32 bg-[#F8F8F8]'>
             <div>
                 <div className='flex items-center justify-center'>
-                    <div className='flex flex-wrap items-center justify-center mt-8 md:mt-14 gap-6'>
+                    <div className='flex flex-wrap items-center justify-center mt-10 md:mt-14 gap-6'>
                         <div id='multiple-card' className='border bg-white border-gray-500 sm:w-96 px-2 py-5 rounded-lg hover:shadow-bottom'>
                             <div className='flex items-center justify-center'>
                                 <img className='w-20' src="https://assets-v2.scaler.com/assets/technical-support-d11d16e019dbb2885dda285f9a01e7e03ebbb8e696e5e874bfe1e7e532117626.png.gz" alt="" />

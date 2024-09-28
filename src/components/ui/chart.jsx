@@ -72,7 +72,7 @@ const Chart = ({ value }) => {
         });
     }, [value]);
 
-    return <AgCharts options={options} className="md:h-[350px]" />;
+    return <AgCharts options={options} className="w-full md:h-[350px]" />;
 };
 
 export default Chart;

@@ -36,7 +36,7 @@ const About = () => {
                 scrollTrigger: {
                     trigger: '#about-card-1',
                     start: '20% bottom',
-                    markers: true,
+                    // markers: true,
                     // scrub: true
                     
                 },
@@ -51,7 +51,7 @@ const About = () => {
                 scrollTrigger: {
                     trigger: '#about-card-2',
                     start: '20% bottom',
-                    markers: true,
+                    // markers: true,
                     // scrub: true
                     
                 },
@@ -66,7 +66,7 @@ const About = () => {
                 scrollTrigger: {
                     trigger: '#about-card-3',
                     start: '20% bottom',
-                    markers: true,
+                    // markers: true,
                     // scrub: true
                     
                 },
@@ -81,7 +81,7 @@ const About = () => {
                 scrollTrigger: {
                     trigger: '#about-card-4',
                     start: '20% bottom',
-                    markers: true,
+                    // markers: true,
                     // scrub: true
                     
                 },
@@ -104,7 +104,7 @@ const About = () => {
                 <div className='w-1/2' ><AboutCard /></div>
             </div> */}
 
-            <div id='about-bg' class="relative h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${"https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg"})` }}>
+            <div id='about-bg' class="relative h-[400px] md:h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${"https://demo.bosathemes.com/educator/wp-content/uploads/sites/29/2022/06/educator-img12.jpg"})` }}>
                 <svg class="absolute bottom-0 left-0 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#fff" fill-opacity="1" d="M0,128L120,144C240,160,480,192,720,192C960,192,1200,160,1320,144L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
                 </svg>

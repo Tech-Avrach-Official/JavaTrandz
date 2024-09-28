@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 
 const ServiceExplore = () => {
     return (
+        <div className='md:pt-16 bg-[#f8f8f8]'>
         <div className='bg-black px-4 xl:px-32 py-16'>
             <div className='flex gap-10 flex-col xl:flex-row items-center justify-center'>
                 <div className='w-full xl:w-1/2'>
@@ -50,6 +51,7 @@ const ServiceExplore = () => {
                 </div>
 
             </div>
+        </div>
         </div>
     )
 }

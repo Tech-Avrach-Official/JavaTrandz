@@ -6,10 +6,10 @@ const BlogCards = () => {
         <>
         
         <div className='w-full bg-[#F8F8F8] px-4 xl:px-40 py-20'>
-            <div className='flex justify-center flex-wrap gap-7'>
+            <div className='flex justify-center flex-wrap gap-10'>
                 {
                     Array.from({ length: 8 }).map((_, i) => (
-                        <div className="w-[350px] cursor-pointer rounded-lg border border-gray-100 bg-white shadow-sm" key={i}>
+                        <div className="w-[350px] cursor-pointer rounded-lg shadow-sm shadow-slate-300 border border-gray-100 bg-white" key={i}>
                 <Link to='/blogpage'>
                         <img
                             alt=""

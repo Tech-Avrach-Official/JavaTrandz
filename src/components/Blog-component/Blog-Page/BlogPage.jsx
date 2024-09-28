@@ -1,7 +1,8 @@
 import { TooltipCom } from '@/components/Auth/Tooltip-Com/TooltipCom'
 import { Input } from '@/components/ui/input';
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAnglesUp, faLink } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import {
     Select,
@@ -17,7 +18,12 @@ const BlogPage = () => {
     return (
         <>
             <Navbar />
-            <div className='w-full px-4 md:px-14 xl:px-40 py-10'>
+            <div id='top' className='relative w-full px-4 md:px-14 xl:px-40 py-20'>
+                <div className='fixed bottom-5 right-5'>
+                <a href='#top'>
+                <FontAwesomeIcon icon={faAnglesUp} className='text-3xl bg-second text-white p-2 rounded-md'/>
+                </a>
+                </div>
                 <div className='flex flex-col gap-5'>
                     <hr className='border-2 border-[#000000]' />
                     <div className='flex flex-col-reverse lg:flex-row gap-5'>
