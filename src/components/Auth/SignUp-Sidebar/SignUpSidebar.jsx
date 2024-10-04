@@ -47,7 +47,7 @@ const Sidebar = () => {
                     <div className='mt-20'>
                         <div>
                             <h1 className='text-3xl font-bold'>Login</h1>
-                            <p className='mt-2 text-gray-500'>or <span className='text-blue-600 font-bold cursor-pointer'>create your scaler account</span></p>
+                            <p className='mt-2 text-gray-500'>or <span className='text-blue-600 font-bold cursor-pointer'>create your JavaTrandz account</span></p>
                         </div>
                         <div className='mt-5'>
                             <p className='text-black font-semibold'>Mobile Number <span className='text-red-500'>*</span></p>
