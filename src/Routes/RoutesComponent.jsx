@@ -14,6 +14,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import BlogPage from '@/components/Blog-component/Blog-Page/BlogPage';
 import AddBlog from '@/Pages/AddBlog/AddBlog';
+import Loading from '@/components/Loading/Loading';
 // import Contact from '@/Pages/Contact/Contact';
 // import Blog from '@/Pages/Blog/Blog';
 // import Services from '@/Pages/Services/Services';
@@ -24,14 +25,16 @@ const RoutesComponent = () => {
   return (
     <>
       {/* <Scrollup /> */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>
+        <Loading />
+      </div>}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/service' element={<Services />} />
           <Route path='/blog' element={<Blog />} />
-          <Route path='/blogpage' element={<BlogPage /> } />
-          <Route path='/add-blog' element={<AddBlog /> } />
+          <Route path='/blogpage/:id' element={<BlogPage /> } />
+          <Route path='/blog-form/:task' element={<AddBlog /> } />
           <Route path='/contact' element={<Contact /> } />
 
           <Route path='/pagenotfound' element={<PageNotFound />} />
