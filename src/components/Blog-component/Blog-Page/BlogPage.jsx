@@ -24,13 +24,13 @@ import Loading from '@/components/Loading/Loading';
 
 const BlogPage = () => {
     const { id } = useParams();
-
+    const isAdmin = localStorage.getItem('tempData');
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { selectedBlog, isLoading, isError, error } = useSelector((state) => state.blog);
 
     useEffect(() => {
-            dispatch(getBlogById(id));
+        dispatch(getBlogById(id));
     }, [dispatch]);
 
     const handleDeleteBlog = () => {
@@ -49,6 +49,17 @@ const BlogPage = () => {
         }
     }
 
+    const handleCopyLink = () => {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url)
+            .then(() => {
+                alert("Link copied to clipboard!");
+            })
+            .catch((error) => {
+                console.error("Error copying link:", error);
+            });
+    }
+
     console.log("selectedBlog", selectedBlog);
 
     if (isLoading) return <Loading />;
@@ -61,9 +72,9 @@ const BlogPage = () => {
             <Navbar />
             <div id='top' className='relative w-full px-4 md:px-14 xl:px-40 py-20'>
                 <div className='fixed bottom-5 right-5'>
-                <a href='#top'>
-                <FontAwesomeIcon icon={faAnglesUp} className='text-3xl bg-second text-white p-2 rounded-md'/>
-                </a>
+                    <a href='#top'>
+                        <FontAwesomeIcon icon={faAnglesUp} className='text-3xl bg-second text-white p-2 rounded-md' />
+                    </a>
                 </div>
                 <div className='flex flex-col gap-5'>
                     <hr className='border-2 border-[#000000]' />
@@ -79,7 +90,9 @@ const BlogPage = () => {
                                 <TooltipCom icon={faTwitter} tooltipText="Twitter" />
                                 <TooltipCom icon={faFacebook} tooltipText="Facebook" />
                                 <TooltipCom icon={faInstagram} tooltipText="Instagram" />
+                                <span className='cursor-pointer hover:text-second' onClick={handleCopyLink}>
                                 <TooltipCom icon={faLink} tooltipText="Copy Link" />
+                                </span>
                                 <span className='border h-2 border-gray-400'></span>
                                 <span className='text-gray-500 text-base'>{selectedBlog?.duration} Read</span>
                             </div>
@@ -91,16 +104,16 @@ const BlogPage = () => {
                             <div className='mt-1'>
                                 <span>Last updated: </span>
                                 <span className='text-gray-500'>
-                                {selectedBlog?.lastUpdate 
-    ? new Date(selectedBlog.lastUpdate).toLocaleString([], { 
-        year: 'numeric', 
-        month: '2-digit', 
-        day: '2-digit', 
-        hour: '2-digit', 
-        minute: '2-digit' 
-      }) 
-    : 'No date available'}
-</span>
+                                    {selectedBlog?.lastUpdate
+                                        ? new Date(selectedBlog.lastUpdate).toLocaleString([], {
+                                            year: 'numeric',
+                                            month: '2-digit',
+                                            day: '2-digit',
+                                            hour: '2-digit',
+                                            minute: '2-digit'
+                                        })
+                                        : 'No date available'}
+                                </span>
                             </div>
                         </div>
                         <div className='w-full lg:w-1/2'>
@@ -110,7 +123,7 @@ const BlogPage = () => {
                     <hr className='border-2 border-[#000000]' />
                     <div className='flex flex-col lg:flex-row gap-10'>
                         <div className='w-full lg:w-[70%]'>
-                            
+
                             {
                                 selectedBlog?.content && parse(selectedBlog?.content)
                             }
@@ -244,13 +257,16 @@ const BlogPage = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex gap-2 justify-center m-4'>
-            <Link to={`/blog-form/edit?id=${selectedBlog?._id}`}>
-            <Button variant="outline">Update</Button>
-            </Link>
+            {
+                isAdmin &&
+                <div className='flex gap-2 justify-center m-4'>
+                    <Link to={`/blog-form/edit?id=${selectedBlog?._id}`}>
+                        <Button variant="outline">Update</Button>
+                    </Link>
 
-            <Button variant="destructive" onClick={handleDeleteBlog}>Delete</Button>
-            </div>
+                    <Button variant="destructive" onClick={handleDeleteBlog}>Delete</Button>
+                </div>
+            }
             <Footer />
         </>
     );

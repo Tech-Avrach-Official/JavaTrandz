@@ -15,6 +15,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import BlogPage from '@/components/Blog-component/Blog-Page/BlogPage';
 import AddBlog from '@/Pages/AddBlog/AddBlog';
 import Loading from '@/components/Loading/Loading';
+import AdminVarification from '@/Pages/AdminVarifaction/AdminVarification';
 // import Contact from '@/Pages/Contact/Contact';
 // import Blog from '@/Pages/Blog/Blog';
 // import Services from '@/Pages/Services/Services';
@@ -40,6 +41,9 @@ const RoutesComponent = () => {
           <Route path='/pagenotfound' element={<PageNotFound />} />
           <Route path='/siteundermantainance' element={<Maintenance />} />
 
+          <Route path='/admin' element={<AdminVarification />} />
+
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </>

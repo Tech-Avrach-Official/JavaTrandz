@@ -70,6 +70,7 @@ box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
   animation: slide 16s infinite;
 }
 
+
 @layer base {
   :root {
     --first: rgb(0, 0, 0);
@@ -135,10 +136,10 @@ box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
 }
 
 h1 {
-  @apply text-4xl font-bold; /* Apply larger and bold styles */
+  @apply text-4xl font-bold; 
 }
 h2 {
-  @apply text-3xl font-semibold; /* Slightly smaller, but still bold */
+  @apply text-3xl font-semibold; 
 }
 h3 {
   @apply text-2xl font-semibold;
@@ -148,9 +149,6 @@ h4 {
 }
 h5 {
   @apply text-lg font-medium;
-}
-h6 {
-  @apply text-base font-medium;
 }
 
 @layer base {

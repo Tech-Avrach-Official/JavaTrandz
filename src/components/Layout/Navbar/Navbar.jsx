@@ -4,6 +4,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+    const isAdmin = localStorage.getItem('tempData')
     return (
         <div className='sticky shadow-md  top-0 z-50'>
             <div className='px-4 md:px-12 lg:px-24  bg-white h-14 flex items-center justify-between'>
@@ -25,9 +26,13 @@ const Navbar = () => {
                         <Link to={'/contact'}>
                         <li className='hidden md:block text-base font-medium text-gray-700 hover:border-gray-800 py-1 px-3 rounded-md hover:bg-gray-100 duration-200 cursor-pointer' >Contact</li>
                         </Link>
-                        <Link to={'/blog-form/add-blog'}>
-                        <li className='hidden md:block text-base font-medium text-gray-700 hover:border-gray-800 py-1 px-3 rounded-md hover:bg-gray-100 duration-200 cursor-pointer' >Add Blog</li>
-                        </Link>
+                        
+                        {
+                            isAdmin && 
+                            <Link to={'/blog-form/add-blog'}>
+                            <li className='hidden md:block text-base font-medium text-gray-700 hover:border-gray-800 py-1 px-3 rounded-md hover:bg-gray-100 duration-200 cursor-pointer' >Add Blog</li>
+                            </Link>
+                        }
                         
                     </ul>
                 </div>
