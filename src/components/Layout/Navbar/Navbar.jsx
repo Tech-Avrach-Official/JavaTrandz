@@ -8,7 +8,9 @@ const Navbar = () => {
     return (
         <div className='sticky shadow-md  top-0 z-50'>
             <div className='px-4 md:px-12 lg:px-24  bg-white h-14 flex items-center justify-between'>
-                <div><h1 className='text-2xl font-bold'>Java Trandze</h1></div>
+                <Link to='/'>
+                <div><img src='logo.png' alt="" height={70} width={70}/></div>
+                </Link>
                 <div>
                     <ul className='flex gap-2'>
                         <Link to='/'>

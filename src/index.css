@@ -74,7 +74,7 @@ box-shadow: 1px 7px 10px -3px rgba(163,163,163,1);
 @layer base {
   :root {
     --first: rgb(0, 0, 0);
-    --second: rgb(255,154,0);
+    --second: rgb(249,105,42);
     --third: rgb(67, 67, 67);
     --four: rgb(255, 255, 255);
     --text-primary: rgb(255, 255, 255);
