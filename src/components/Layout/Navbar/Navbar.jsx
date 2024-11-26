@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import Sidebar from '../Sidebar/Sidebar'
 import { Link } from 'react-router-dom'
+import Logo from '../../../assets/logo.png'
 
 const Navbar = () => {
     const isAdmin = localStorage.getItem('tempData')
@@ -9,7 +10,7 @@ const Navbar = () => {
         <div className='sticky shadow-md  top-0 z-50'>
             <div className='px-4 md:px-12 lg:px-24  bg-white h-14 flex items-center justify-between'>
                 <Link to='/'>
-                <div><img src='logo.png' alt="" height={70} width={70}/></div>
+                <div><img src={Logo} alt="" height={70} width={70}/></div>
                 </Link>
                 <div>
                     <ul className='flex gap-2'>

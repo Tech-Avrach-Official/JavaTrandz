@@ -1,11 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
+const baseUrl = 'https://javatrandz-backend.onrender.com';
+
 // Thunk to fetch all blogs
 export const fetchBlogs = createAsyncThunk(
     'blog/fetchBlogs',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://java-trend.onrender.com/api/blog-posts');
+            const response = await fetch(`${baseUrl}/api/blog-posts`);
             if (!response.ok) {
                 throw new Error('Failed to fetch blogs');
             }
@@ -17,15 +19,13 @@ export const fetchBlogs = createAsyncThunk(
 );
 
 
-// curl --location 'https://java-trend.onrender.com/api/images/upload' \
-// --form 'image=@"/C:/Users/Windows 11/Downloads/3d-yellow-heart-shape-balloons_1409-3788.avif"'
 
 // Thunk to upload an image
 export const uploadImage = createAsyncThunk(
     'blog/uploadImage',
     async (formData, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://java-trend.onrender.com/api/images/upload', {
+            const response = await fetch(`${baseUrl}/api/images/upload`, {
                 method: 'POST',
                 body: formData,
             });
@@ -44,7 +44,7 @@ export const createBlog = createAsyncThunk(
     'blog/createBlog',
     async ({ dataToSave }, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://java-trend.onrender.com/api/blog-posts', {
+            const response = await fetch(`${baseUrl}/api/blog-posts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,18 +61,12 @@ export const createBlog = createAsyncThunk(
     }
 )
 
-// curl --location --request PUT 'https://java-trend.onrender.com/api/blog-posts/blogs/673deec8edb10432916aa5f9' \
-// --header 'Content-Type: application/json' \
-// --data '{
-//     "name" : "sahil prajapati",
-//     "description" : "This is python description added"
-// }'
 
 export const updateBlog = createAsyncThunk(
     'blog/updateBlog',
     async ({ id, dataToSave }, { rejectWithValue }) => {
 
-        const apiUrl = `https://java-trend.onrender.com/api/blog-posts/blogs/${id}`
+        const apiUrl = `${baseUrl}/api/blog-posts/blogs/${id}`
 
         console.log("apiUrl", apiUrl)
 
@@ -102,7 +96,7 @@ export const deleteBlog = createAsyncThunk(
     'blog/deleteBlog',
     async (id, { rejectWithValue }) => {
         try {
-            const response = await fetch(`https://java-trend.onrender.com/api/blog-posts/blogs/${id}`, {
+            const response = await fetch(`${baseUrl}/api/blog-posts/blogs/${id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
@@ -119,7 +113,7 @@ export const getBlogById = createAsyncThunk(
     'blog/getBlogById',
     async (blogId, { rejectWithValue }) => {
         try {
-            const response = await fetch(`https://java-trend.onrender.com/api/blog-posts/blogs/${blogId}`);
+            const response = await fetch(`${baseUrl}/api/blog-posts/blogs/${blogId}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch blog by ID');
             }
