@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAnglesUp, faLink } from '@fortawesome/free-solid-svg-icons';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Select,
     SelectContent,
@@ -20,6 +20,7 @@ import parse from 'html-react-parser';
 import { Button } from '@/components/ui/button';
 import Loading from '@/components/Loading/Loading';
 import toast from 'react-hot-toast';
+import ConfirmationPopup from '@/components/confirmationPopup/confirmationPopup';
 
 
 
@@ -66,10 +67,10 @@ const BlogPage = () => {
     console.log("selectedBlog", selectedBlog);
 
     if (isLoading) return <Loading />;
-    
+
     if (isError) {
         toast.error("Error fetching blog"),
-        console.log("Error fetching blog:", error)
+            console.log("Error fetching blog:", error)
         return <p>Error: {error}</p>;
     }
 
@@ -99,7 +100,7 @@ const BlogPage = () => {
                                 <TooltipCom icon={faFacebook} tooltipText="Facebook" />
                                 <TooltipCom icon={faInstagram} tooltipText="Instagram" />
                                 <span className='cursor-pointer hover:text-second' onClick={handleCopyLink}>
-                                <TooltipCom icon={faLink} tooltipText="Copy Link" />
+                                    <TooltipCom icon={faLink} tooltipText="Copy Link" />
                                 </span>
                                 <span className='border h-2 border-gray-400'></span>
                                 <span className='text-gray-500 text-base'>{selectedBlog?.duration} Read</span>
@@ -272,7 +273,9 @@ const BlogPage = () => {
                         <Button variant="outline">Update</Button>
                     </Link>
 
-                    <Button variant="destructive" onClick={handleDeleteBlog}>Delete</Button>
+                    <ConfirmationPopup onDelete={handleDeleteBlog}>
+                    <Button variant="destructive">Delete</Button>{/* This is the trigger button */}
+                    </ConfirmationPopup>
                 </div>
             }
             <Footer />
