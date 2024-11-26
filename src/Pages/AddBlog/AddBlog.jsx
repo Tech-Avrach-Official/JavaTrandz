@@ -7,6 +7,7 @@ import { createBlog, getBlogById, uploadImage, updateBlog } from "@/Redux/featur
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 
 const AddBlog = () => {
@@ -14,6 +15,7 @@ const AddBlog = () => {
   const { task } = useParams();
   const id = searchParams.get("id"); // Extract the 'id' parameter
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { isLoading } = useSelector((state) => state.blog); 
 
@@ -115,6 +117,7 @@ const AddBlog = () => {
       const response = await dispatch(createBlog({ dataToSave }));
       console.log("Blog created successfully:", response.payload);
       toast.success("Blog created successfully");
+      navigate("/blog");
     } catch (error) {
       console.error("Error creating blog:", error.message);
       toast.error("Error creating blog");
@@ -156,6 +159,7 @@ console.log("id", id)
       const response = await dispatch(updateBlog({ id, dataToSave }));
       console.log("Blog updated successfully:", response.payload);
       toast.success("Blog updated successfully");
+      navigate("/blog");
     } catch (error) {
       console.error("Error updating blog:", error.message);
       toast.error("Error updating blog");
