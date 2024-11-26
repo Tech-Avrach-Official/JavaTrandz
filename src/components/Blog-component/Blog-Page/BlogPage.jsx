@@ -53,9 +53,9 @@ const BlogPage = () => {
         }
     }
 
-    const handleCopyLink = () => {
-        const url = window.location.href;
-        navigator.clipboard.writeText(url)
+    const handleCopyLink = (link = window.location.href) => {
+
+        navigator.clipboard.writeText(link)
             .then(() => {
                 toast.success("Link copied to clipboard");
             })
@@ -96,10 +96,16 @@ const BlogPage = () => {
                                 </h1>
                             </div>
                             <div className='flex items-center gap-4 mt-10'>
-                                <TooltipCom icon={faTwitter} tooltipText="Twitter" />
-                                <TooltipCom icon={faFacebook} tooltipText="Facebook" />
-                                <TooltipCom icon={faInstagram} tooltipText="Instagram" />
-                                <span className='cursor-pointer hover:text-second' onClick={handleCopyLink}>
+                                <span className='cursor-pointer hover:text-blue-600' onClick={() => handleCopyLink(selectedBlog?.socialMedia?.x)}>
+                                    <TooltipCom icon={faTwitter} tooltipText="Twitter" />
+                                </span>
+                                <span className='cursor-pointer hover:text-blue-600' onClick={() => handleCopyLink(selectedBlog?.socialMedia?.facebook)}>
+                                    <TooltipCom icon={faFacebook} tooltipText="Facebook" />
+                                </span>
+                                <span className='cursor-pointer hover:text-pink-700' onClick={() => handleCopyLink(selectedBlog?.socialMedia?.instagram)}>
+                                    <TooltipCom icon={faInstagram} tooltipText="Instagram" />
+                                </span>
+                                <span className='cursor-pointer hover:text-second' onClick={() => handleCopyLink()}>
                                     <TooltipCom icon={faLink} tooltipText="Copy Link" />
                                 </span>
                                 <span className='border h-2 border-gray-400'></span>
@@ -274,7 +280,7 @@ const BlogPage = () => {
                     </Link>
 
                     <ConfirmationPopup onDelete={handleDeleteBlog}>
-                    <Button variant="destructive">Delete</Button>{/* This is the trigger button */}
+                        <Button variant="destructive">Delete</Button>{/* This is the trigger button */}
                     </ConfirmationPopup>
                 </div>
             }

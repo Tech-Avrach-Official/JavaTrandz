@@ -44,6 +44,9 @@ const AddBlog = () => {
           title: result?.payload?.title,
           description: result?.payload?.description,
           image: result?.payload?.image,
+          instagram: result?.payload?.socialMedia?.instagram,
+          facebook: result?.payload?.socialMedia?.facebook,
+          x: result?.payload?.socialMedia?.x
         });
         setContent(result?.payload?.content);
       })
@@ -84,6 +87,9 @@ const AddBlog = () => {
       !formData.title ||
       !formData.description ||
       !formData.image ||
+      !formData.instagram ||
+      !formData.facebook ||
+      !formData.x ||
       !content
     ) {
       toast.error("Please fill in all the required fields.");
@@ -111,6 +117,11 @@ const AddBlog = () => {
       content: content,  // The content you get from the editor
       description: formData.description,
       image: imageUrl,  // The image ID that comes from the upload
+      socialMedia: {
+          instagram: formData.instagram,
+          facebook: formData.facebook,
+          x: formData.x
+      }
   };
 
     try {
@@ -125,6 +136,25 @@ const AddBlog = () => {
   };
 
   const handleUpdate = async () => {
+
+
+    if (
+      !formData.slug ||
+      !formData.authorName ||
+      !formData.authorPosition ||
+      !formData.duration ||
+      !formData.title ||
+      !formData.description ||
+      !formData.image ||
+      !formData.instagram ||
+      !formData.facebook ||
+      !formData.x ||
+      !content
+    ) {
+      toast.error("Please fill in all the required fields.");
+      return;
+    }
+
       // Start with the current image URL from formData
     let imageUrl = formData.image;
 
@@ -151,6 +181,11 @@ const AddBlog = () => {
     content: content,  // The content you get from the editor
     description: formData.description,
     image: imageUrl,  // The image ID that comes from the upload
+    socialMedia: {
+      instagram: formData.instagram,
+      facebook: formData.facebook,
+      x: formData.x
+  }
 };
 
 console.log("id", id)
@@ -159,6 +194,7 @@ console.log("id", id)
       const response = await dispatch(updateBlog({ id, dataToSave }));
       console.log("Blog updated successfully:", response.payload);
       toast.success("Blog updated successfully");
+      dispatch(fetchBlogs());
       navigate("/blog");
     } catch (error) {
       console.error("Error updating blog:", error.message);
@@ -236,6 +272,42 @@ console.log("id", id)
           </div>
 
           <div className="flex flex-col bg-gray-100 p-4 rounded-lg gap-4">
+
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <label htmlFor="instagram">Instagram link</label>
+              <Input
+                id="instagram"
+                type="text"
+                placeholder="Instagram link"
+                value={formData.instagram}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="facebook">facebook link</label>
+              <Input
+                id="facebook"
+                type="text"
+                placeholder="facebook link"
+                value={formData.facebook}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="x">Twitter link</label>
+              <Input
+                id="x"
+                type="text"
+                placeholder="Twitter link"
+                value={formData.x}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
             <div>
               <label htmlFor="title" className="block mb-1 font-medium">
                 Title
@@ -295,7 +367,7 @@ console.log("id", id)
             isEdit ? (
               <Button onClick={handleUpdate}>{ isLoading ? "Updating..." : "Update" }</Button>
             ) : (
-              <Button disabled={isLoading} onClick={handleSave}>{ isLoading ? "Updating..." : "Save" }</Button>
+              <Button disabled={isLoading} onClick={handleSave}>{ isLoading ? "Saving..." : "Save" }</Button>
             )
           }
         </div>
