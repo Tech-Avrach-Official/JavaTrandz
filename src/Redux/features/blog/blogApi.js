@@ -1,13 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const baseUrl = 'https://javatrandz-backend.onrender.com';
+const BASE_URL = 'https://javatrandz-backend.onrender.com';
 
 // Thunk to fetch all blogs
 export const fetchBlogs = createAsyncThunk(
     'blog/fetchBlogs',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await fetch(`${baseUrl}/api/blog-posts`);
+            const response = await fetch(`${BASE_URL}/api/blog-posts`);
             if (!response.ok) {
                 throw new Error('Failed to fetch blogs');
             }
@@ -25,7 +25,7 @@ export const uploadImage = createAsyncThunk(
     'blog/uploadImage',
     async (formData, { rejectWithValue }) => {
         try {
-            const response = await fetch(`${baseUrl}/api/images/upload`, {
+            const response = await fetch(`${BASE_URL}/api/images/upload`, {
                 method: 'POST',
                 body: formData,
             });
@@ -44,7 +44,7 @@ export const createBlog = createAsyncThunk(
     'blog/createBlog',
     async ({ dataToSave }, { rejectWithValue }) => {
         try {
-            const response = await fetch(`${baseUrl}/api/blog-posts`, {
+            const response = await fetch(`${BASE_URL}/api/blog-posts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ export const updateBlog = createAsyncThunk(
     'blog/updateBlog',
     async ({ id, dataToSave }, { rejectWithValue }) => {
 
-        const apiUrl = `${baseUrl}/api/blog-posts/blogs/${id}`
+        const apiUrl = `${BASE_URL}/api/blog-posts/blogs/${id}`
 
         console.log("apiUrl", apiUrl)
 
@@ -96,7 +96,7 @@ export const deleteBlog = createAsyncThunk(
     'blog/deleteBlog',
     async (id, { rejectWithValue }) => {
         try {
-            const response = await fetch(`${baseUrl}/api/blog-posts/blogs/${id}`, {
+            const response = await fetch(`${BASE_URL}/api/blog-posts/blogs/${id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
@@ -113,7 +113,7 @@ export const getBlogById = createAsyncThunk(
     'blog/getBlogById',
     async (blogId, { rejectWithValue }) => {
         try {
-            const response = await fetch(`${baseUrl}/api/blog-posts/blogs/${blogId}`);
+            const response = await fetch(`${BASE_URL}/api/blog-posts/blogs/${blogId}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch blog by ID');
             }
