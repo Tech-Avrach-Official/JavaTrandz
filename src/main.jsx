@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <StoreProvider>
     <Toaster 
-      position="top-right"
+      position="bottom-right"
       reverseOrder={false}
     />
     <App />

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const AdminVarification = () => {
@@ -13,15 +14,17 @@ const AdminVarification = () => {
       
       localStorage.setItem('tempData', true); 
       console.log('Login successful!');
+      toast.success('Login successful!');
       navigate('/');
     } else {
-      alert("Invalid username or password.");
+      toast.error('Invalid username or password.');
     }
   };
 
   const handleLogout = () => {
     localStorage.removeItem('tempData');
     navigate('/');
+    toast.success('Logout successful!');
   }
 
   return (

@@ -5,6 +5,7 @@ import SideAction from '@/components/Layout/Side-Quick-Action/SideAction';
 import Loading from '@/components/Loading/Loading';
 import { fetchBlogs } from '@/Redux/features/blog/blogApi';
 import React, { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -20,7 +21,14 @@ const Blog = () => {
   }, [dispatch, allBlogs]);
 
   if (isLoading) return <Loading />;
-  if (isError) return <p>Error: {error}</p>;
+  if (isError) {
+    toast.error("Error fetching blogs"),
+    console.log("Error fetching blogs:", error)
+
+    return (
+    <p>Error: {error}</p>
+    )
+  }
 
   return (
     <div>

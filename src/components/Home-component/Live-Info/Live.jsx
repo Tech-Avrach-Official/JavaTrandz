@@ -103,11 +103,9 @@ export const LiveStatus = () => {
     // const [isLive, setIsLive] = useState(true);
 
     return (
-        <div className="flex items-center">
-            <div
-                className={`w-3 h-3 rounded-full bg-red-500 shadow-[0_0_6px_3px_rgba(231,29,69)] animate-blinkRed`}
-            //   onClick={() => setIsLive(!isLive)}
-            />
-        </div>
+        <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500 opacity-90"></span>
+      </span>
     );
 };

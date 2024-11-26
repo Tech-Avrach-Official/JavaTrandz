@@ -19,6 +19,7 @@ import { deleteBlog, getBlogById, fetchBlogs } from '@/Redux/features/blog/blogA
 import parse from 'html-react-parser';
 import { Button } from '@/components/ui/button';
 import Loading from '@/components/Loading/Loading';
+import toast from 'react-hot-toast';
 
 
 
@@ -40,13 +41,14 @@ const BlogPage = () => {
                     console.log("Error deleting blog:", response.error);
                 } else {
                     console.log("Blog deleted successfully");
-                    
+                    toast.success("Blog deleted successfully");
                     dispatch(fetchBlogs());
                     navigate("/blog");
                 }
             });
         } catch (error) {
             console.error("Error deleting blog:", error);
+            toast.error("Error deleting blog");
         }
     }
 
@@ -54,7 +56,7 @@ const BlogPage = () => {
         const url = window.location.href;
         navigator.clipboard.writeText(url)
             .then(() => {
-                alert("Link copied to clipboard!");
+                toast.success("Link copied to clipboard");
             })
             .catch((error) => {
                 console.error("Error copying link:", error);
@@ -64,7 +66,12 @@ const BlogPage = () => {
     console.log("selectedBlog", selectedBlog);
 
     if (isLoading) return <Loading />;
-    if (isError) return <p>Error: {error}</p>;
+    
+    if (isError) {
+        toast.error("Error fetching blog"),
+        console.log("Error fetching blog:", error)
+        return <p>Error: {error}</p>;
+    }
 
 
 

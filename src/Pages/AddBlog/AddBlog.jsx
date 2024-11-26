@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { createBlog, getBlogById, uploadImage, updateBlog } from "@/Redux/features/blog/blogApi";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 const AddBlog = () => {
@@ -83,7 +84,7 @@ const AddBlog = () => {
       !formData.image ||
       !content
     ) {
-      alert("Please fill in all the fields");
+      toast.error("Please fill in all the required fields.");
       return;
     }
 
@@ -92,7 +93,7 @@ const AddBlog = () => {
 
     // If image upload fails, don't proceed with creating the blog
     if (!imageUrl) {
-      alert("Failed to upload the image.");
+      toast.error("Image upload failed. Blog creation failed.");
       return;
     }
 
@@ -113,9 +114,10 @@ const AddBlog = () => {
     try {
       const response = await dispatch(createBlog({ dataToSave }));
       console.log("Blog created successfully:", response.payload);
-      alert("Blog created successfully");
+      toast.success("Blog created successfully");
     } catch (error) {
       console.error("Error creating blog:", error.message);
+      toast.error("Error creating blog");
     }
   };
 
@@ -130,6 +132,7 @@ const AddBlog = () => {
       imageUrl = await handleImageUpload(formData.image);
     } catch (error) {
       console.error("Image upload failed:", error);
+      toast.error("Image upload failed. Blog update failed.");
       return; // Stop execution if the upload fails
     }
   }
@@ -152,9 +155,10 @@ console.log("id", id)
     try {
       const response = await dispatch(updateBlog({ id, dataToSave }));
       console.log("Blog updated successfully:", response.payload);
-      alert("Blog updated successfully");
+      toast.success("Blog updated successfully");
     } catch (error) {
       console.error("Error updating blog:", error.message);
+      toast.error("Error updating blog");
     }
   }
 
@@ -166,9 +170,9 @@ console.log("id", id)
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-gray-100 p-4 rounded-lg">
             <FilePicker
-  onImageSelect={(image) => setFormData((prev) => ({ ...prev, image }))}
-  initialImage={formData.image}
-/>
+              onImageSelect={(image) => setFormData((prev) => ({ ...prev, image }))}
+              initialImage={formData.image}
+            /> 
             </div>
             <div className="bg-gray-100 p-4 rounded-lg">
               <div className="flex flex-col gap-4">
@@ -285,9 +289,9 @@ console.log("id", id)
 
           {
             isEdit ? (
-              <Button disabled={isLoading} onClick={handleUpdate}>{ isLoading ? "Updating..." : "Update" }</Button>
+              <Button onClick={handleUpdate}>{ isLoading ? "Updating..." : "Update" }</Button>
             ) : (
-              <Button onClick={handleSave}>Save</Button>
+              <Button disabled={isLoading} onClick={handleSave}>{ isLoading ? "Updating..." : "Save" }</Button>
             )
           }
         </div>
