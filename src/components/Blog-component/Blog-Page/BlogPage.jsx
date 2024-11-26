@@ -40,6 +40,7 @@ const BlogPage = () => {
                     console.log("Error deleting blog:", response.error);
                 } else {
                     console.log("Blog deleted successfully");
+                    
                     dispatch(fetchBlogs());
                     navigate("/blog");
                 }
